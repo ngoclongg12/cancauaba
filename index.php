@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once 'config/config.php';
+$config = include_once './config/config.php';
 include_once './connecting/connectDB.php';
 
 $sql = "SELECT * FROM danhsach_sp ORDER BY ID ASC LIMIT 8";

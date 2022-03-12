@@ -41,7 +41,7 @@ if (isset($_POST["submit"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng kí</title>
     <?php
-    include_once $_SERVER['DOCUMENT_ROOT'] . "/cancauaba/connecting/heading.php";
+    include_once "../connecting/heading.php";
     ?>
 </head>
 
@@ -149,7 +149,7 @@ if (isset($_POST["submit"])) {
     </section>
 
     <?php
-    include_once $_SERVER['DOCUMENT_ROOT'] . "/Ozada/connecting/footing.php";
+    include_once "../connecting/footing.php";
     ?>
 </body>
 

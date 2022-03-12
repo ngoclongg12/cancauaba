@@ -1,11 +1,11 @@
-<script src="<?= $config['hostname'] ?>/library/bootstrap-v4/js/proper.min.js"></script>
-<script src="<?= $config['hostname'] ?>/library/bootstrap-v4/js/jquery.js"></script>
-<script src="<?= $config['hostname'] ?>/library/jquery/jquery.js"></script>
-<script src="<?= $config['hostname'] ?>/library/bootstrap-v4/js/boostrap.js"></script>
+<script src="<?= $config ?>/library/bootstrap-v4/js/proper.min.js"></script>
+<script src="<?= $config ?>/library/bootstrap-v4/js/jquery.js"></script>
+<script src="<?= $config ?>/library/jquery/jquery.js"></script>
+<script src="<?= $config ?>/library/bootstrap-v4/js/boostrap.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="<?= $config['hostname'] ?>/library/slick-main/slick/slick.min.js"></script>
-<script src="<?= $config['hostname'] ?>/library/slick-main/slick.jquery.json"></script>
-<script src="<?= $config['hostname'] ?>/library/dropify/js/dropify.min.js"></script>
+<script src="<?= $config ?>/library/slick-main/slick/slick.min.js"></script>
+<script src="<?= $config ?>/library/slick-main/slick.jquery.json"></script>
+<script src="<?= $config ?>/library/dropify/js/dropify.min.js"></script>
 
 <Script>
     $(document).ready(function() {
@@ -160,7 +160,7 @@
             $.get('./component/list_content/cart/cart_getinfo.php',
             {Name: newnameBill, Phone: newphoneBill, Address: newaddressBill},
             function(data){
-                window.location.replace("<?= $config['hostname'] ?>index.php?component=cart_success");
+                window.location.replace("<?= $config ?>index.php?component=cart_success");
             })
             
         })
@@ -201,7 +201,7 @@
                 method: 'get',
             }).done(res => {
                 console.log(res);
-                window.location.replace("<?= $config['hostname'] ?>admin/trangquantri.php?Admin=order_shipping");
+                window.location.replace("<?= $config ?>admin/trangquantri.php?Admin=order_shipping");
             }).fail(err => {
                 console.log(err);
             });
@@ -218,7 +218,7 @@
                 method: 'get',
             }).done(res => {
                 console.log(res);
-                window.location.replace("<?= $config['hostname'] ?>admin/trangquantri.php?Admin=order_success");
+                window.location.replace("<?= $config ?>admin/trangquantri.php?Admin=order_success");
             }).fail(err => {
                 console.log(err);
             });

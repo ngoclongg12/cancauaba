@@ -1,2 +1,2 @@
 <?php
-$config = "http://localhost/cancauaba";
+return "http://localhost/cancauaba";
