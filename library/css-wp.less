@@ -14,10 +14,6 @@ a#top-link {
   color: white;
 }
 
-// .acc-user:hover {
-//   color: red;
-// }
-
 .acc-user:hover .hide {
   display: block;
   position: fixed;
@@ -32,4 +28,24 @@ a#top-link {
 .hide {
   display: none;
   transition: 1.5s;
+}
+
+.block-danhmuc{
+  position: relative;
+}
+
+.show-danhmuc {
+  position: absolute;
+  display: none;
+  background: white;
+  z-index: 10;
+  top: 0;
+  left: 200px;
+  box-shadow: -15px 10px 20px -9px #6c757d;
+  width: max-content !important;
+}
+
+.show-danhmuc .row{
+  padding: 20px 40px !important;
+  margin: 0 !important;
 }

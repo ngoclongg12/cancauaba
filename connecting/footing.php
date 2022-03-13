@@ -13,6 +13,7 @@
         $('.pageNumber<?php if (isset($_GET['page_filter'])) {echo $_GET['page_filter'];} ?>').focus();
         $('.pageNumber<?php if (isset($_GET['page'])) {echo $_GET['page'];} ?>').addClass('active');
         $('.pageNumber<?php if (!isset($_GET['page'])){echo "1";} ?>').addClass('active');
+        
         $(".accUser").click(function() {
             $(".opAccHide").slideToggle();
         });
