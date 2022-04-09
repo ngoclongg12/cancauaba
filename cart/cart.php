@@ -5,11 +5,13 @@ $totalAll = 0;
 
 include_once '../layout/header.php';
 ?>
+<link rel="stylesheet" href="<?= $config ?>/library/css-wp.less">
+
 <link rel="stylesheet" href="<?= $config ?>/library/bootstrap-v4/css/bootstrap.min.css">
 
 <div class="container mt-4">
-    <div style="background-color: rgb(170, 224, 248);">
-        <h4 class="text-aligncenter" style="line-height: 40px; padding-left: 15px">GIỎ HÀNG OZADA </h4>
+    <div style="background-color: #446084;">
+        <h4 class="text-aligncenter" style="color: white; line-height: 40px; padding-left: 15px; text-transform: uppercase;">GIỎ HÀNG anhbafishing</h4>
 
     </div>
     <form class="form_tb_cart" method="get">
@@ -35,7 +37,7 @@ include_once '../layout/header.php';
                         <input type="hidden" name="component" value="bill">
                         <tr>
                             <th scope="row">
-                                <img class="admin_img_mota" src="./img/<?= $v['Image'] ?>" alt="product">
+                                <img class="admin_img_mota" src="../img/<?= $v['Image'] ?>" alt="product">
                                 <div class="namePrd"><?= $v['Name'] ?></div>
                             </th>
                             <td><?= number_format($v['Price']) ?>đ</td>

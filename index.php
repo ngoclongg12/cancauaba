@@ -1511,7 +1511,10 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 
 														<div class="box-image">
 															<div class="image-zoom image-cover" style="padding-top:160px;">
-																<img width="1200" height="588" src="<?= $config ?>/wp-content/uploads/2022/01/flatsome-video-placeholder.jpg" class="attachment- size-" alt="" loading="lazy" srcset="<?= $config ?>/wp-content/uploads/2022/01/flatsome-video-placeholder.jpg 1200w, /wp-content/uploads/2022/01/flatsome-video-placeholder-300x147.jpg 300w, /wp-content/uploads/2022/01/flatsome-video-placeholder-1024x502.jpg 1024w, /wp-content/uploads/2022/01/flatsome-video-placeholder-768x376.jpg 768w" sizes="(max-width: 1200px) 100vw, 1200px">
+																<img width="1200" height="588" 
+																src="<?= $config . '/img' . '/' . $row['Image']?>" 
+																class="attachment- size-" alt="" loading="lazy" 
+																sizes="(max-width: 1200px) 100vw, 1200px">
 															</div>
 														</div>
 

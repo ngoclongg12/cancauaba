@@ -41,7 +41,7 @@ if(isset($_SESSION['hoTen'])){
                 ?>
                         <tr>
                             <td scope="row">
-                                <img class="admin_img_mota" src="./img/<?= $v['Image'] ?>" alt="product">
+                                <img class="admin_img_mota" src="../img/<?= $v['Image'] ?>" alt="<?= $v['Name'] ?>">
                                 <div class="namePrd"><?= $v['Name'] ?></div>
                             </td>
                             <td><?= number_format($v['Price']) ?>đ</td>
