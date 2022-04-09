@@ -111,11 +111,8 @@
             $('#modalPay').html(typeBill);
         })
         $('.js_checkout').click(function(e) {
-            // e.preventDefault();
-            // return false;
             let infoKH = $('.infoKH').serialize();
-            // console.log(infoKH);
-            // console.log($('#typeBill :selected').val());
+            console.log(infoKH);
             if($('#typeBill :selected').val() == "0"){
                 $('.errTypeBill').show();
                 $('.errTypeBill').html('Vui lòng chọn hình thức thanh toán!');
@@ -158,10 +155,10 @@
             let newphoneBill = $('#phoneBill').val();
             let newaddressBill = $('#addressBill').val();
             
-            $.get('./component/list_content/cart/cart_getinfo.php',
+            $.get('./cart_getinfo.php',
             {Name: newnameBill, Phone: newphoneBill, Address: newaddressBill},
             function(data){
-                window.location.replace("<?= $config ?>index.php?component=cart_success");
+                window.location.replace("<?= $config ?>/cart/cart_success.php");
             })
             
         })
@@ -169,19 +166,16 @@
         // count price
         $('.countNum').change(function() {
             var countVal = $(this).val();
-            console.log(countVal);
             var inputID = $(this).attr('data-id');
-            console.log(inputID);
 
             $.ajax({
                 data: {
                     id: inputID,
                     qty: countVal
                 },
-                url: './component/list_content/cart/cart_caculator.php',
+                url: './cart_caculator.php',
                 method: 'get',
             }).done(res => {
-                console.log(res);
                 location.reload();
             }).fail(err => {
                 console.log(err.response);
@@ -201,7 +195,6 @@
                 url: '../Admin_layout/Order/order_processList.php',
                 method: 'get',
             }).done(res => {
-                console.log(res);
                 window.location.replace("<?= $config ?>admin/trangquantri.php?Admin=order_shipping");
             }).fail(err => {
                 console.log(err);
@@ -218,7 +211,6 @@
                 url: '../Admin_layout/Order/order_processShip.php',
                 method: 'get',
             }).done(res => {
-                console.log(res);
                 window.location.replace("<?= $config ?>admin/trangquantri.php?Admin=order_success");
             }).fail(err => {
                 console.log(err);
