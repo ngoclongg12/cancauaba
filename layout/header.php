@@ -23,7 +23,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 	<meta charset="UTF-8">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?= $config ?>/xmlrpc.php">
-	<link rel="stylesheet" href="../library/css-wp.less">
+	<link rel="stylesheet" href="<?= $config ?>/library/css-wp.less">
 
 	<script>
 		(function(html) {
@@ -109,6 +109,10 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 			vertical-align: -0.1em !important;
 			background: none !important;
 			padding: 0 !important;
+		}
+
+		a:hover {
+		  text-decoration: none;
 		}
 	</style>
 	<link rel="stylesheet" id="wp-block-library-css" href="<?= $config ?>/wp-includes/css/dist/block-library/style.min.css?ver=5.9" type="text/css" media="all">
@@ -625,7 +629,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 							<ul class="nav top-bar-nav nav-right nav-small  nav-box">
 								<li class="html header-button-1">
 									<div class="header-button">
-										<a rel="noopener noreferrer" href="./login/dangnhap.php" target="_blank" class="button primary is-outline is-small" style="border-radius:5px;">
+										<a rel="noopener noreferrer" href="<?= $config ?>/login/dangnhap.php" target="_blank" class="button primary is-outline is-small" style="border-radius:5px;">
 											<span>Đăng nhập</span>
 										</a>
 									</div>
@@ -635,7 +639,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 								<li class="header-divider">
 								<li class="html header-button-2">
 									<div class="header-button">
-										<a rel="noopener noreferrer" href="./login/Dangki.php" class="button primary is-outline is-small" style="border-radius:5px;">
+										<a rel="noopener noreferrer" href="<?= $config ?>/login/Dangki.php" class="button primary is-outline is-small" style="border-radius:5px;">
 											<span>Đăng ký</span>
 										</a>
 									</div>
@@ -750,23 +754,23 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 												if (isset($_SESSION["quyen"]) && $_SESSION["quyen"] == "0") {
 												?>
 													<div>
-														<a href="./admin/trangquantri.php">Trang quản trị</a>
+														<a href="<?= $config ?>/admin/trangquantri.php">Trang quản trị</a>
 													</div>
 												<?php
 												}
 												?>
 												<div>
-													<a href="./login/Doimatkhau.php">Đổi mật khẩu</a>
+													<a href="<?= $config ?>/login/Doimatkhau.php">Đổi mật khẩu</a>
 												</div>
 												<div>
-													<a href="./login/Dangxuat.php">Đăng xuất</a>
+													<a href="<?= $config ?>/login/Dangxuat.php">Đăng xuất</a>
 												</div>
 											</div>
 										</div>
 									<?php
 									} else {
 									?>
-										<a href="./login/Dangnhap.php" class="element-error tooltip" title="Tài khoản">
+										<a href="<?= $config ?>/login/Dangnhap.php" class="element-error tooltip" title="Tài khoản">
 											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
 												<path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
 											</svg>
@@ -776,10 +780,10 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 									?>
 									<div class="login-hide hide">
 										<div>
-											<a href="./login/Dangki.php">Đăng ký</a>
+											<a href="<?= $config ?>/login/Dangki.php">Đăng ký</a>
 										</div>
 										<div>
-											<a href="./login/Doimatkhau.php">Đổi mật khẩu</a>
+											<a href="<?= $config ?>/login/Doimatkhau.php">Đổi mật khẩu</a>
 										</div>
 									</div>
 
@@ -787,7 +791,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 								</li>
 								|
 								<li>
-									<a href="./cart/cart.php" class="element-error tooltip" title="Giỏ hàng">
+									<a href="<?= $config ?>/cart/cart.php" class="element-error tooltip" title="Giỏ hàng">
 										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
 											<path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
 										</svg>

@@ -1503,7 +1503,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 									</div>
 									<div class="row row-dashed" id="row-797195334">
 										<?php while ($row = mysqli_fetch_array($query)) { ?>
-											<a href="./cart/cart_process.php?id_sp=<?= $row['ID'] ?>&t=add" id="col-1264949517" class="col medium-3 small-6 large-3">
+											<a href="./layout/product-page.php?id_sp=<?= $row['ID'] ?>" id="col-1264949517" class="col medium-3 small-6 large-3">
 												<div class="col-inner">
 
 
@@ -1524,10 +1524,18 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 																<h4><?= $row['Name'] ?></h4>
 																<p><?= number_format($row['Price']) ?> đ</p>
 															</div>
+															<form action="./cart/cart_process.php">
+																<input name="id_sp" value="<?= $row['ID'] ?>" type="hidden">
+																<input name="t" value="add" type="hidden">
+																<button class="button primary">Add to cart</button>
+															</form>
 														</div>
+														
 													</div>
+													
 
 												</div>
+												
 											</a>
 										<?php } ?>
 
