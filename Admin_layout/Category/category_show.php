@@ -13,6 +13,12 @@ $pageRow = $page_prd * $pagePerRow - $pagePerRow;
 
 $sql = "SELECT * FROM danhsach_dm ORDER BY ID ASC LIMIT $pageRow, $pagePerRow";
 $query = mysqli_query($connect, $sql);
+$row = mysqli_fetch_all($query);
+// echo'<pre>';
+// print_r($row);
+// echo'</pre>';
+
+// die;
 
 $totalRow = mysqli_num_rows(mysqli_query($connect, "SELECT * FROM danhsach_dm"));
 $totalPage = ceil($totalRow / $pagePerRow);
@@ -76,11 +82,11 @@ for ($i = 1; $i <= $totalPage; $i++) {
     </thead>
     <tbody>
         <?php
-        while ($row = mysqli_fetch_array($query)) {
+        foreach ($row as $key=>$row) {
         ?>
             <tr>
-                <td><?= $row['ID'] ?></td>
-                <td><?= $row['Name'] ?></td>
+                <td><?= $row['0'] ?></td>
+                <td><?= $row['1'] ?></td>
                 <td>
                     <a class="btn btn-primary btn-sm" href="../public/TrangQuanTri.php?Admin=category_fix&id_dm=<?= $row["ID"] ?>">
                         <i class="fas fa-edit"></i>
