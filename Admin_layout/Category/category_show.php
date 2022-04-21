@@ -45,22 +45,22 @@ for ($i = 1; $i <= $totalPage; $i++) {
         $prevPage = '
         <li class="page-item">
         <a class="page-link" 
-        href="http://localhost/TheGioiBDS/public/TrangQuanTri.php?Admin=category_show&page_category='.$x.'" 
+        href="http://localhost/cancauaba/admin/trangQuanTri.php?Admin=category_show&page_category='.$x.'" 
         aria-label="Previous">
         <span aria-hidden="true"><i class="fas fa-angle-left"></i></span>
         </a>
         </li>';
-        $listPage .= '<li class="page-item active"><a class="page-link" href="http://localhost/TheGioiBDS/public/TrangQuanTri.php?Admin=category_show&page_category=' . $i . '">' . $i . '</a></li>';
+        $listPage .= '<li class="page-item active"><a class="page-link" href="http://localhost/cancauaba/admin/trangQuanTri.php?Admin=category_show&page_category=' . $i . '">' . $i . '</a></li>';
         $nextPage = '
         <li class="page-item">
         <a class="page-link" 
-        href="http://localhost/TheGioiBDS/public/TrangQuanTri.php?Admin=category_show&page_category='.$y.'" 
+        href="http://localhost/cancauaba/admin/trangQuanTri.php?Admin=category_show&page_category='.$y.'" 
         aria-label="Next">
         <span aria-hidden="true"><i class="fas fa-angle-right"></i></span>
         </a>
         </li>';
     } else {
-        $listPage .= '<li class="page-item"><a class="page-link" href="http://localhost/TheGioiBDS/public/TrangQuanTri.php?Admin=product_show&page_category=' . $i . '">' . $i . '</a></li>';
+        $listPage .= '<li class="page-item"><a class="page-link" href="http://localhost/cancauaba/admin/trangQuanTri.php?Admin=category_show&page_category=' . $i . '">' . $i . '</a></li>';
         
     }
 }
@@ -110,9 +110,7 @@ for ($i = 1; $i <= $totalPage; $i++) {
     <div class="col-md-4">
         <nav aria-label="Page navigation example">
             <ul class="pagination">
-                <?= $prevPage ?>
                 <?= $listPage ?>
-                <?= $nextPage ?>
                 </li>
             </ul>
         </nav>
