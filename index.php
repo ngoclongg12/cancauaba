@@ -849,7 +849,9 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 
 
 												<div class="block-danhmuc danhmuc1">
-													<?php while ($row_danhmuc = mysqli_fetch_array($query_danhmuc)) {?>
+													<?php
+													while ($row_danhmuc = mysqli_fetch_array($query_danhmuc)) { 
+													?>
 													<a class="plain" href="#">
 														<div class="icon-box featured-box icon-box-left text-left" style="margin:0px 0px 10px 0px;">
 															<div class="icon-box-img" style="width: 30px">
@@ -865,6 +867,29 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 															</div>
 														</div>
 													</a>
+													<div class="container show-danhmuc show-danhmuc1">
+														<div class="row">
+															<?php 
+																$id_dm_con_new = $row_danhmuc['id'];
+																$danhmuc_con = "SELECT * FROM danhsach_dm_con WHERE id_dm = $id_dm_con_new";
+																$query_danhmuc_con = mysqli_query($connect, $danhmuc_con);
+																while ($row_danhmuc_con = mysqli_fetch_array($query_danhmuc_con)) {
+															?>
+															<div class="col-md-4">
+																<div class="col-md-12"><?= $row_danhmuc_con['name'] ?></div>
+																<div class="col-md-12">
+																	<a href="abc.zxc">Test cau don</a>
+																</div>
+																<div class="col-md-12">
+																	<a href="zxc.asdasd">Test cau don</a>
+																</div>
+																<div class="col-md-12">
+																	<a href="zxc.asdasd">Test cau don</a>
+																</div>
+															</div>
+															<?php } ?>
+														</div>
+													</div>
 													<?php } ?>
 													<?php include_once "./list-cancau/caudon.php" ?>
 												</div>
