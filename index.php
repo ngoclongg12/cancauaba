@@ -709,7 +709,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 
 									<div id="search-lightbox" class="mfp-hide dark text-center">
 										<div class="searchform-wrapper ux-search-box relative form-flat is-large">
-											<form method="get" class="searchform" action="httpscancauaba.xyz/" role="search">
+											<form method="get" class="searchform" action="search.php" role="search">
 												<div class="flex-row relative">
 													<div class="flex-col flex-grow">
 														<input type="search" class="search-field mb-0" name="s" value="" id="s" placeholder="Tìm kiếm...">
