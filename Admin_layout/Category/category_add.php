@@ -10,7 +10,7 @@ if (isset($_POST["submit"])) {
 
     if (isset($name)) {
 
-        $sql = "INSERT INTO danhsach_dm (Name) VALUES ('$name')";
+        $sql = "INSERT INTO danhsach_dm (name) VALUES ('$name')";
         $query = mysqli_query($connect, $sql);
         $alert = '<center class="alert alert-success mt-3 add-sp">Thêm mới thành công !</center>';
     } else {

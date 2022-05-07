@@ -1,7 +1,7 @@
 <?php
 session_start();
-$config = include_once '../config/config.php';
-include_once '../connecting/connectDB.php';
+$config = include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/config/config.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/connectDB.php';
 
 $sql = "SELECT * FROM danhsach_sp ORDER BY ID ASC LIMIT 8";
 $query = mysqli_query($connect, $sql);

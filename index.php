@@ -6,6 +6,9 @@ include_once './connecting/connectDB.php';
 $sql = "SELECT * FROM danhsach_sp ORDER BY ID ASC LIMIT 8";
 $query = mysqli_query($connect, $sql);
 
+$danhmuc = "SELECT * FROM danhsach_dm ORDER BY ID ASC LIMIT 6";
+$query_danhmuc = mysqli_query($connect, $danhmuc);
+
 $banner = "SELECT * FROM danhsach_banner ORDER BY id_banner DESC LIMIT 2";
 $query_banner = mysqli_query($connect, $banner);
 
@@ -706,7 +709,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 
 									<div id="search-lightbox" class="mfp-hide dark text-center">
 										<div class="searchform-wrapper ux-search-box relative form-flat is-large">
-											<form method="get" class="searchform" action="httpscancauaba.xyz/" role="search">
+											<form method="get" class="searchform" action="search.php" role="search">
 												<div class="flex-row relative">
 													<div class="flex-col flex-grow">
 														<input type="search" class="search-field mb-0" name="s" value="" id="s" placeholder="Tìm kiếm...">
@@ -846,6 +849,9 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 
 
 												<div class="block-danhmuc danhmuc1">
+													<?php
+													while ($row_danhmuc = mysqli_fetch_array($query_danhmuc)) { 
+													?>
 													<a class="plain" href="#">
 														<div class="icon-box featured-box icon-box-left text-left" style="margin:0px 0px 10px 0px;">
 															<div class="icon-box-img" style="width: 30px">
@@ -857,14 +863,38 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 															</div>
 															<div class="icon-box-text last-reset">
 	
-																<p>Câu Đơn / Câu Đài</p>
+																<p><?= $row_danhmuc['name'] ?></p>
 															</div>
 														</div>
 													</a>
+													<div class="container show-danhmuc show-danhmuc1">
+														<div class="row">
+															<?php 
+																$id_dm_con_new = $row_danhmuc['id'];
+																$danhmuc_con = "SELECT * FROM danhsach_dm_con WHERE id_dm = $id_dm_con_new";
+																$query_danhmuc_con = mysqli_query($connect, $danhmuc_con);
+																while ($row_danhmuc_con = mysqli_fetch_array($query_danhmuc_con)) {
+															?>
+															<div class="col-md-4">
+																<div class="col-md-12"><?= $row_danhmuc_con['name'] ?></div>
+																<div class="col-md-12">
+																	<a href="abc.zxc">Test cau don</a>
+																</div>
+																<div class="col-md-12">
+																	<a href="zxc.asdasd">Test cau don</a>
+																</div>
+																<div class="col-md-12">
+																	<a href="zxc.asdasd">Test cau don</a>
+																</div>
+															</div>
+															<?php } ?>
+														</div>
+													</div>
+													<?php } ?>
 													<?php include_once "./list-cancau/caudon.php" ?>
 												</div>
 
-												<div class="block-danhmuc danhmuc2">
+												<!-- <div class="block-danhmuc danhmuc2">
 													<a class="plain" href="#">
 														<div class="icon-box featured-box icon-box-left text-left" style="margin:0px 0px 10px 0px;">
 															<div class="icon-box-img" style="width: 30px">
@@ -957,7 +987,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 														</div>
 													</a>
 													<?php include_once "./list-cancau/phaocau.php" ?>
-												</div>
+												</div> -->
 
 												<a class="plain" href="#">
 													<div class="icon-box featured-box icon-box-left text-left" style="margin:0px 0px 10px 0px;">
