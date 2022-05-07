@@ -6,6 +6,9 @@ include_once './connecting/connectDB.php';
 $sql = "SELECT * FROM danhsach_sp ORDER BY ID ASC LIMIT 8";
 $query = mysqli_query($connect, $sql);
 
+$danhmuc = "SELECT * FROM danhsach_dm ORDER BY ID ASC LIMIT 6";
+$query_danhmuc = mysqli_query($connect, $danhmuc);
+
 $banner = "SELECT * FROM danhsach_banner ORDER BY id_banner DESC LIMIT 2";
 $query_banner = mysqli_query($connect, $banner);
 
@@ -846,6 +849,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 
 
 												<div class="block-danhmuc danhmuc1">
+													<?php while ($row_danhmuc = mysqli_fetch_array($query_danhmuc)) {?>
 													<a class="plain" href="#">
 														<div class="icon-box featured-box icon-box-left text-left" style="margin:0px 0px 10px 0px;">
 															<div class="icon-box-img" style="width: 30px">
@@ -857,14 +861,15 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 															</div>
 															<div class="icon-box-text last-reset">
 	
-																<p>Câu Đơn / Câu Đài</p>
+																<p><?= $row_danhmuc['name'] ?></p>
 															</div>
 														</div>
 													</a>
+													<?php } ?>
 													<?php include_once "./list-cancau/caudon.php" ?>
 												</div>
 
-												<div class="block-danhmuc danhmuc2">
+												<!-- <div class="block-danhmuc danhmuc2">
 													<a class="plain" href="#">
 														<div class="icon-box featured-box icon-box-left text-left" style="margin:0px 0px 10px 0px;">
 															<div class="icon-box-img" style="width: 30px">
@@ -957,7 +962,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 														</div>
 													</a>
 													<?php include_once "./list-cancau/phaocau.php" ?>
-												</div>
+												</div> -->
 
 												<a class="plain" href="#">
 													<div class="icon-box featured-box icon-box-left text-left" style="margin:0px 0px 10px 0px;">
