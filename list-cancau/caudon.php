@@ -1,5 +1,5 @@
 <?php
-
+while ($row_danhmuc = mysqli_fetch_array($query_danhmuc)) {
 ?>
 <div class="container show-danhmuc show-danhmuc1">
     <div class="row">
@@ -41,3 +41,4 @@
         </div>
     </div>
 </div>
+<?php } ?>
