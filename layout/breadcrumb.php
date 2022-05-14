@@ -1,5 +1,5 @@
-<?php 
-include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/heading.php';
+<?php
+$config = include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/config/config.php';
 ?>
 
 <meta charset="UTF-8">
@@ -24,12 +24,16 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/heading.php';
         <div class="d-table-cell">
             <div class="container">
                 <div class="title-content">
+
+                    <!-- tittle -->
                     <h2>Single Product</h2>
                     <ul>
                         <li>
                             <a href="index.html">Home</a>
                         </li>
                         <li>
+
+                            <!-- page -->
                             <span>Single Product</span>
                         </li>
                     </ul>
@@ -44,6 +48,9 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/heading.php';
         <img src="<?= $config ?>/assets/images/shape18.png" alt="Shape">
     </div>
 </div>
+
+<!-- content -->
+<!-- end content -->
 
 <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script src="<?= $config ?>/assets/js/jquery.min.js"></script>
@@ -70,7 +77,3 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/heading.php';
 <script src="<?= $config ?>/assets/js/jquery-modal-video.min.js"></script>
 <script src="<?= $config ?>/assets/js/thumb-slide.js"></script>
 <script src="<?= $config ?>/assets/js/custom.js"></script>
-
-<?php 
-include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/footing.php';
-?>
