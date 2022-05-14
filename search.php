@@ -30,9 +30,9 @@ for ($i = 1; $i <= $totalPage; $i++) {
         $y = $_GET["page_filter"] + 1;
     }
 
-    $prevPg = '<li class="page-item"><a class="page-link" href="./index.php?component=filter&search=' . $text . '&page_filter=' . $x . '" aria-label="Previous"><span aria-hidden="true"><i class="fas fa-angle-left"></i></span></a></li>';
-    $listPrd .= '<li class="page-item"><a class="page-link pageNumber'.$i.'" href="./index.php?component=filter&search=' . $text . '&page_filter=' . $i . '">' . $i . '</a></li>';
-    $nextPg = '<li class="page-item"><a class="page-link" href="./index.php?component=filter&search=' . $text . '&page_filter=' . $y . '" aria-label="Next"><span aria-hidden="true"><i class="fas fa-angle-right"></i></span></a></li>';
+    $prevPg = '<li class="page-item"><a class="page-link" href="./search.php?s=' . $text . '&page_filter=' . $x . '" aria-label="Previous"><span aria-hidden="true"><i class="fas fa-angle-left"></i></span></a></li>';
+    $listPrd .= '<li class="page-item"><a class="page-link pageNumber'.$i.'" href="./search.php?s=' . $text . '&page_filter=' . $i . '">' . $i . '</a></li>';
+    $nextPg = '<li class="page-item"><a class="page-link" href="./search.php?s=' . $text . '&page_filter=' . $y . '" aria-label="Next"><span aria-hidden="true"><i class="fas fa-angle-right"></i></span></a></li>';
 }
 $sql = "SELECT * FROM danhsach_sp WHERE Name LIKE ('$textFix') ORDER BY ID ASC LIMIT $perRow,$pageRow";
 $query = mysqli_query($connect, $sql);
