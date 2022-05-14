@@ -66,6 +66,24 @@ $query = mysqli_query($connect, $sql);
 <link rel="icon" type="image/png" href="<?= $config ?>/assets/images/favicon.png">
 <link rel="stylesheet" href="<?= $config ?>/library/css-wp.less">
 <link rel="stylesheet" href="<?= $config ?>/library/bootstrap-v4/css/bootstrap.min.css">
+<style>
+    a:hover {
+        text-decoration: none;
+    }
+
+    .box-text-inner {
+        min-height: 100px;
+    }
+    .box-text-inner h4 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .box-text-inner h4:hover {
+        text-overflow: clip;
+    }
+</style>
+
 <div class="page-title-area">
     <div class="d-table">
         <div class="d-table-cell">
@@ -157,7 +175,7 @@ $query = mysqli_query($connect, $sql);
                     if (isset($_GET['page_filter']) && $_GET['page_filter'] < $totalPage) {
                         echo $nextPg;
                     }
-                    if (!isset($_GET['page_filter']) && mysqli_num_rows($query) >= 2) {
+                    if (empty($_GET['page_filter']) && $totalPage >= 2) {
                         echo $nextPg;
                     }
                     ?>
