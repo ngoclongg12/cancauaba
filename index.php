@@ -23,11 +23,15 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 <html lang="vi" class="loading-site no-js">
 
 <head>
+	<?php 
+	include_once'./connecting/head-custom.php'; 
+	?>
 	<meta charset="UTF-8">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?= $config ?>/xmlrpc.php">
+	
 	<link rel="stylesheet" href="./library/css-wp.less">
-
+	
 	<script>
 		(function(html) {
 			html.className = html.className.replace(/\bno-js\b/, 'js')
@@ -376,6 +380,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 			font-display: swap
 		}
 	</style>
+	
 	<link rel="stylesheet" id="wpmenucart-css" href="<?= $config ?>/wp-content/plugins/woocommerce-menu-bar-cart/assets/css/wpmenucart-main.min.css?ver=2.10.4" type="text/css" media="all">
 	<link rel="stylesheet" id="dashicons-css" href="<?= $config ?>/wp-includes/css/dashicons.min.css?ver=5.9" type="text/css" media="all">
 	<link rel="stylesheet" id="flatsome-icons-css" href="<?= $config ?>/wp-content/themes/flatsome/assets/css/fl-icons.css?ver=3.12" type="text/css" media="all">
@@ -398,6 +403,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="<?= $config ?>/xmlrpc.php?rsd">
 	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="<?= $config ?><?= $config ?>/wp-includes/wlwmanifest.xml">
 	<meta name="generator" content="WordPress 5.9">
+	
 	<link rel="shortlink" href="<?= $config ?>">
 	<link rel="alternate" type="application/json+oembed" href="<?= $config ?>/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F">
 	<link rel="alternate" type="text/xml+oembed" href="<?= $config ?>/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F&#038;format=xml">
@@ -572,6 +578,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 			content: "Popular";
 		}
 	</style>
+	
 </head>
 
 <body class="home page-template-default page page-id-9 wp-custom-logo wp-schema-pro-1.4.1 header-shadow lightbox nav-dropdown-has-arrow">
@@ -772,7 +779,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 									<?php
 									} else {
 									?>
-										<a href="./login/Dangnhap.php" class="element-error tooltip" title="Tài khoản">
+										<a href="./login/Dangnhap.php" class="element-error" title="Tài khoản">
 											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
 												<path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
 											</svg>
@@ -793,7 +800,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 								</li>
 								|
 								<li>
-									<a class="element-error tooltip" href="./cart/cart.php" title="Giỏ hàng">
+									<a class="element-error" href="./cart/cart.php" title="Giỏ hàng">
 										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
 											<path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
 										</svg>
@@ -1992,6 +1999,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 
 		</main>
 
+		<?php include_once'./connecting/script-custom.php'; ?>
 		<?php include_once'./layout/footer.php'; ?>
 	
 </body>
