@@ -55,7 +55,7 @@
 
 
 
-								<div style="padding-bottom: 10px"><a href="#">Bảo hành - Đỏi trả</a></div>
+								<div style="padding-bottom: 10px"><a href="#">Bảo hành - Đổi trả</a></div>
 
 
 
@@ -64,7 +64,7 @@
 												<path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z"></path>
 											</svg></a></li>
 
-									<li class="wp-social-link wp-social-link-google wp-block-social-link"><a href="/" aria-label="Google: httpscancauaba.xyz/" class="wp-block-social-link-anchor"> <svg width="24" height="24" viewbox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false">
+									<li class="wp-social-link wp-social-link-google wp-block-social-link"><a href="<?= $config ?>" aria-label="Google: httpscancauaba.xyz/" class="wp-block-social-link-anchor"> <svg width="24" height="24" viewbox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false">
 												<path d="M12.02,10.18v3.72v0.01h5.51c-0.26,1.57-1.67,4.22-5.5,4.22c-3.31,0-6.01-2.75-6.01-6.12s2.7-6.12,6.01-6.12 c1.87,0,3.13,0.8,3.85,1.48l2.84-2.76C16.99,2.99,14.73,2,12.03,2c-5.52,0-10,4.48-10,10s4.48,10,10,10c5.77,0,9.6-4.06,9.6-9.77 c0-0.83-0.11-1.42-0.25-2.05H12.02z"></path>
 											</svg></a></li>
 
@@ -132,10 +132,10 @@
 					</div>
 				</li>
 				<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-20"><a href="<?= $config ?>" aria-current="page">Trang chủ</a></li>
-				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="/can-cau/">Cần câu</a></li>
-				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="/kinh-nghiem/">Kinh nghiệm</a></li>
-				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="/lien-he/">Liên hệ</a></li>
-				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162"><a href="/gioi-thieu/">Giới thiệu</a></li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="<?= $config ?>/can-cau/">Cần câu</a></li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="<?= $config ?>kinh-nghiem/">Kinh nghiệm</a></li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="<?= $config ?>/lien-he/">Liên hệ</a></li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162"><a href="<?= $config ?>gioi-thieu/">Giới thiệu</a></li>
 				WooCommerce not Found<li class="header-newsletter-item has-icon">
 
 					<a href="#header-newsletter-signup" class="tooltip" title="Sign up for Newsletter">
@@ -289,8 +289,8 @@
             });
         }
 	</script>
-	<script type="text/javascript" src="/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9" id="regenerator-runtime-js"></script>
-	<script type="text/javascript" src="/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+	<script type="text/javascript" src="<?= $config ?>/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9" id="regenerator-runtime-js"></script>
+	<script type="text/javascript" src="<?= $config ?>/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
 	<script type="text/javascript" id="contact-form-7-js-extra">
 		/* <![CDATA[ */
 		var wpcf7 = {
@@ -457,7 +457,7 @@
 		RocketLazyLoadScripts.run();
 	</script>
 	<script type="text/javascript" src="<?= $config ?>/wp-content/themes/flatsome/inc/extensions/flatsome-live-search/flatsome-live-search.js?ver=3.12.1" id="flatsome-live-search-js"></script>
-	<script type="text/javascript" src="/wp-includes/js/hoverIntent.min.js?ver=1.10.1" id="hoverIntent-js"></script>
+	<script type="text/javascript" src="<?= $config ?>/wp-includes/js/hoverIntent.min.js?ver=1.10.1" id="hoverIntent-js"></script>
 	<script type="text/javascript" id="flatsome-js-js-extra">
 		/* <![CDATA[ */
 		var flatsomeVars = {
