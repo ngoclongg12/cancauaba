@@ -112,7 +112,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 		}
 
 		a:hover {
-		  text-decoration: none;
+		  text-decoration: none !important;
 		}
 	</style>
 	<link rel="stylesheet" id="wp-block-library-css" href="<?= $config ?>/wp-includes/css/dist/block-library/style.min.css?ver=5.9" type="text/css" media="all">
@@ -397,7 +397,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 	<link rel="https://api.w.org/" href="<?= $config ?>/wp-json/">
 	<link rel="alternate" type="application/json" href="<?= $config ?>/wp-json/wp/v2/pages/9">
 	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="<?= $config ?>/xmlrpc.php?rsd">
-	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="<?= $config ?><?= $config ?>/wp-includes/wlwmanifest.xml">
+	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="<?= $config ?>/wp-includes/wlwmanifest.xml">
 	<meta name="generator" content="WordPress 5.9">
 	<link rel="shortlink" href="<?= $config ?>">
 	<link rel="alternate" type="application/json+oembed" href="<?= $config ?>/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F">
@@ -581,7 +581,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 
 
 		<header id="header" class="header has-sticky sticky-jump">
-			<div class="header-wrapper">
+		<div class="header-wrapper">
 				<div id="top-bar" class="header-top hide-for-sticky nav-dark">
 					<div class="flex-row container">
 						<div class="flex-col hide-for-medium flex-left">
@@ -590,7 +590,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 									<ul id="header-contact" class="nav nav-divided nav-uppercase header-contact">
 
 										<li class="">
-											<a href="mailto:anhbafishing@gmail.com" class="tooltip" title="anhbafishing@gmail.com">
+											<a href="mailto:anhbafishing@gmail.com" title="anhbafishing@gmail.com">
 												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-plus" viewBox="0 0 16 16">
 													<path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z" />
 													<path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5Z" />
@@ -600,7 +600,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 										</li>
 
 										<li class="">
-											<a class="tooltip" title="08:00 - 21:00 ">
+											<a title="08:00 - 21:00 ">
 												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-alarm" viewBox="0 0 16 16">
 													<path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5z" />
 													<path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z" />
@@ -609,7 +609,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 										</li>
 
 										<li class="">
-											<a href="tel:0373295525" class="tooltip" title="0373295525">
+											<a href="tel:0373295525" title="0373295525">
 												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-forward" viewBox="0 0 16 16">
 													<path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zm10.762.135a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L14.293 4H9.5a.5.5 0 0 1 0-1h4.793l-1.647-1.646a.5.5 0 0 1 0-.708z" />
 												</svg> <span style="padding-left: 5px;">0373295525</span>
@@ -629,7 +629,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 							<ul class="nav top-bar-nav nav-right nav-small  nav-box">
 								<li class="html header-button-1">
 									<div class="header-button">
-										<a rel="noopener noreferrer" href="<?= $config ?>/login/dangnhap.php" target="_blank" class="button primary is-outline is-small" style="border-radius:5px;">
+										<a rel="noopener noreferrer" href="./login/dangnhap.php" target="_blank" class="button primary is-outline is-small" style="border-radius:5px;">
 											<span>Đăng nhập</span>
 										</a>
 									</div>
@@ -639,7 +639,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 								<li class="header-divider">
 								<li class="html header-button-2">
 									<div class="header-button">
-										<a rel="noopener noreferrer" href="<?= $config ?>/login/Dangki.php" class="button primary is-outline is-small" style="border-radius:5px;">
+										<a rel="noopener noreferrer" href="./login/Dangki.php" class="button primary is-outline is-small" style="border-radius:5px;">
 											<span>Đăng ký</span>
 										</a>
 									</div>
@@ -694,38 +694,8 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 						</div>
 
 						<!-- Left Elements -->
-						<div class="flex-col hide-for-medium flex-left
-            flex-grow">
+						<div class="flex-col hide-for-medium flex-left flex-grow">
 							<ul class="header-nav header-nav-main nav nav-left  nav-size-medium nav-uppercase">
-								<li class="header-search header-search-lightbox has-icon">
-									<a href="#search-lightbox" aria-label="Search" data-open="#search-lightbox" data-focus="input.search-field" class="is-small">
-
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-											<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-										</svg>
-									</a>
-
-									<div id="search-lightbox" class="mfp-hide dark text-center">
-										<div class="searchform-wrapper ux-search-box relative form-flat is-large">
-											<form method="get" class="searchform" action="httpscancauaba.xyz/" role="search">
-												<div class="flex-row relative">
-													<div class="flex-col flex-grow">
-														<input type="search" class="search-field mb-0" name="s" value="" id="s" placeholder="Tìm kiếm...">
-													</div>
-													<div class="flex-col">
-														<button type="submit" class="ux-search-submit submit-button secondary button icon mb-0" aria-label="Submit">
-															<!-- <i class="icon-search"></i>  -->
-															<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-																<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-															</svg>
-														</button>
-													</div>
-												</div>
-												<div class="live-search-results text-left z-top"></div>
-											</form>
-										</div>
-									</div>
-								</li>
 								<li id="menu-item-20" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-20 active"><a href="<?= $config ?>" aria-current="page" class="nav-top-link">Trang chủ</a></li>
 								<li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="<?= $config ?>/can-cau/" class="nav-top-link">Cần câu</a></li>
 								<li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="<?= $config ?>/kinh-nghiem/" class="nav-top-link">Kinh nghiệm</a></li>
@@ -754,23 +724,23 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 												if (isset($_SESSION["quyen"]) && $_SESSION["quyen"] == "0") {
 												?>
 													<div>
-														<a href="<?= $config ?>/admin/trangquantri.php">Trang quản trị</a>
+														<a href="./admin/trangquantri.php">Trang quản trị</a>
 													</div>
 												<?php
 												}
 												?>
 												<div>
-													<a href="<?= $config ?>/login/Doimatkhau.php">Đổi mật khẩu</a>
+													<a href="./login/Doimatkhau.php">Đổi mật khẩu</a>
 												</div>
 												<div>
-													<a href="<?= $config ?>/login/Dangxuat.php">Đăng xuất</a>
+													<a href="./login/Dangxuat.php">Đăng xuất</a>
 												</div>
 											</div>
 										</div>
 									<?php
 									} else {
 									?>
-										<a href="<?= $config ?>/login/Dangnhap.php" class="element-error tooltip" title="Tài khoản">
+										<a href="./login/Dangnhap.php" class="element-error" title="Tài khoản">
 											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
 												<path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
 											</svg>
@@ -780,10 +750,10 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 									?>
 									<div class="login-hide hide">
 										<div>
-											<a href="<?= $config ?>/login/Dangki.php">Đăng ký</a>
+											<a href="./login/Dangki.php">Đăng ký</a>
 										</div>
 										<div>
-											<a href="<?= $config ?>/login/Doimatkhau.php">Đổi mật khẩu</a>
+											<a href="./login/Doimatkhau.php">Đổi mật khẩu</a>
 										</div>
 									</div>
 
@@ -791,7 +761,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 								</li>
 								|
 								<li>
-									<a href="<?= $config ?>/cart/cart.php" class="element-error tooltip" title="Giỏ hàng">
+									<a class="element-error" href="./cart/cart.php" title="Giỏ hàng">
 										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
 											<path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
 										</svg>

@@ -3,7 +3,7 @@
 
 			<!-- FOOTER 1 -->
 			<div class="footer-widgets footer footer-1">
-				<div class="row dark large-columns-3 mb-0">
+				<div class="row dark large-columns-3 mb-0" style="margin: 0 auto">
 					<div id="block-24" class="col pb-0 widget widget_block widget_media_image">
 						<div class="wp-block-image is-style-rounded">
 							<figure class="aligncenter size-medium"><img loading="lazy" width="300" height="300" src="<?= $config ?>/wp-content/uploads/2022/01/logo-1-300x300.png" alt="" class="wp-image-105" srcset="<?= $config ?>/wp-content/uploads/2022/01/logo-1-300x300.png 300w, /wp-content/uploads/2022/01/logo-1-150x150.png 150w, /wp-content/uploads/2022/01/logo-1-768x769.png 768w, /wp-content/uploads/2022/01/logo-1.png 900w" sizes="(max-width: 300px) 100vw, 300px"></figure>
