@@ -853,148 +853,55 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 										<div id="col-852723169" class="col medium-4 small-12 large-4">
 											<div class="col-inner">
 
-
-
-												<div class="block-danhmuc danhmuc1">
+												<div>
 													<?php
+													$stt = 0;
 													while ($row_danhmuc = mysqli_fetch_array($query_danhmuc)) { 
+														$stt++
 													?>
-													<a class="plain" href="#">
-														<div class="icon-box featured-box icon-box-left text-left" style="margin:0px 0px 10px 0px;">
-															<div class="icon-box-img" style="width: 30px">
-																<div class="icon">
-																	<div class="icon-inner">
-																		<img width="300" height="300" src="<?= $config ?>/wp-content/uploads/2022/01/dress-300x300.png" class="attachment-medium size-medium" alt="" loading="lazy" srcset="<?= $config ?>/wp-content/uploads/2022/01/dress-300x300.png 300w, /wp-content/uploads/2022/01/dress-150x150.png 150w, /wp-content/uploads/2022/01/dress.png 512w" sizes="(max-width: 300px) 100vw, 300px">
+														<div class="block-danhmuc danhmuc<?= $stt ?>">
+															<a class="plain" href="#">
+																<div class="icon-box featured-box icon-box-left text-left" style="margin:0px 0px 10px 0px;">
+																	<div class="icon-box-img" style="width: 30px">
+																		<div class="icon">
+																			<div class="icon-inner">
+																				<img width="300" height="300" src="<?= $config ?>/wp-content/uploads/2022/01/dress-300x300.png" class="attachment-medium size-medium" alt="" loading="lazy" srcset="<?= $config ?>/wp-content/uploads/2022/01/dress-300x300.png 300w, /wp-content/uploads/2022/01/dress-150x150.png 150w, /wp-content/uploads/2022/01/dress.png 512w" sizes="(max-width: 300px) 100vw, 300px">
+																			</div>
+																		</div>
+																	</div>
+																	<div class="icon-box-text last-reset">
+			
+																		<p><?= $row_danhmuc['name'] ?></p>
 																	</div>
 																</div>
-															</div>
-															<div class="icon-box-text last-reset">
-	
-																<p><?= $row_danhmuc['name'] ?></p>
+															</a>
+															
+															<div class="container show-danhmuc show-danhmuc<?= $stt ?>">
+																<div class="row">
+																	<?php 
+																		$id_dm_con_new = $row_danhmuc['id'];
+																		$danhmuc_con = "SELECT * FROM danhsach_dm_con WHERE id_dm = $id_dm_con_new";
+																		$query_danhmuc_con = mysqli_query($connect, $danhmuc_con);
+																		while ($row_danhmuc_con = mysqli_fetch_array($query_danhmuc_con)) {
+																	?>
+																	<div class="col-md-4">
+																		<div class="col-md-12"><?= $row_danhmuc_con['name'] ?></div>
+																		<div class="col-md-12">
+																			<a href="abc.zxc">Test <?= $row_danhmuc['name'] ?></a>
+																		</div>
+																		<div class="col-md-12">
+																			<a href="zxc.asdasd">Test <?= $row_danhmuc['name'] ?></a>
+																		</div>
+																		<div class="col-md-12">
+																			<a href="zxc.asdasd">Test <?= $row_danhmuc['name'] ?></a>
+																		</div>
+																	</div>
+																	<?php } ?>
+																</div>
 															</div>
 														</div>
-													</a>
-													<div class="container show-danhmuc show-danhmuc1">
-														<div class="row">
-															<?php 
-																$id_dm_con_new = $row_danhmuc['id'];
-																$danhmuc_con = "SELECT * FROM danhsach_dm_con WHERE id_dm = $id_dm_con_new";
-																$query_danhmuc_con = mysqli_query($connect, $danhmuc_con);
-																while ($row_danhmuc_con = mysqli_fetch_array($query_danhmuc_con)) {
-															?>
-															<div class="col-md-4">
-																<div class="col-md-12"><?= $row_danhmuc_con['name'] ?></div>
-																<div class="col-md-12">
-																	<a href="abc.zxc">Test cau don</a>
-																</div>
-																<div class="col-md-12">
-																	<a href="zxc.asdasd">Test cau don</a>
-																</div>
-																<div class="col-md-12">
-																	<a href="zxc.asdasd">Test cau don</a>
-																</div>
-															</div>
-															<?php } ?>
-														</div>
-													</div>
 													<?php } ?>
-													<?php include_once "./list-cancau/caudon.php" ?>
 												</div>
-
-												<!-- <div class="block-danhmuc danhmuc2">
-													<a class="plain" href="#">
-														<div class="icon-box featured-box icon-box-left text-left" style="margin:0px 0px 10px 0px;">
-															<div class="icon-box-img" style="width: 30px">
-																<div class="icon">
-																	<div class="icon-inner">
-																		<img width="300" height="300" src="<?= $config ?>/wp-content/uploads/2022/01/shirt-300x300.png" class="attachment-medium size-medium" alt="" loading="lazy" srcset="<?= $config ?>/wp-content/uploads/2022/01/shirt-300x300.png 300w, /wp-content/uploads/2022/01/shirt-150x150.png 150w, /wp-content/uploads/2022/01/shirt.png 512w" sizes="(max-width: 300px) 100vw, 300px">
-																	</div>
-																</div>
-															</div>
-															<div class="icon-box-text last-reset">
-
-																<p>Câu Lục</p>
-															</div>
-														</div>
-													</a>
-													<?php include_once "./list-cancau/cauluc.php" ?>
-												</div>
-
-												<div class="block-danhmuc danhmuc3">
-													<a class="plain" href="#">
-														<div class="icon-box featured-box icon-box-left text-left" style="margin:0px 0px 10px 0px;">
-															<div class="icon-box-img" style="width: 30px">
-																<div class="icon">
-																	<div class="icon-inner">
-																		<img width="300" height="300" src="<?= $config ?>/wp-content/uploads/2022/01/couch-300x300.png" class="attachment-medium size-medium" alt="" loading="lazy" srcset="<?= $config ?>/wp-content/uploads/2022/01/couch-300x300.png 300w, /wp-content/uploads/2022/01/couch-150x150.png 150w, /wp-content/uploads/2022/01/couch.png 512w" sizes="(max-width: 300px) 100vw, 300px">
-																	</div>
-																</div>
-															</div>
-															<div class="icon-box-text last-reset">
-
-																<p>Dây Câu</p>
-															</div>
-														</div>
-													</a>
-													<?php include_once "./list-cancau/daycau.php" ?>
-												</div>
-
-												<div class="block-danhmuc danhmuc4">
-													<a class="plain" href="#">
-														<div class="icon-box featured-box icon-box-left text-left" style="margin:0px 0px 10px 0px;">
-															<div class="icon-box-img" style="width: 30px">
-																<div class="icon">
-																	<div class="icon-inner">
-																		<img width="300" height="300" src="<?= $config ?>/wp-content/uploads/2022/01/devices-1-300x300.png" class="attachment-medium size-medium" alt="" loading="lazy" srcset="<?= $config ?>/wp-content/uploads/2022/01/devices-1-300x300.png 300w, /wp-content/uploads/2022/01/devices-1-150x150.png 150w, /wp-content/uploads/2022/01/devices-1.png 512w" sizes="(max-width: 300px) 100vw, 300px">
-																	</div>
-																</div>
-															</div>
-															<div class="icon-box-text last-reset">
-
-																<p>Mồi câu</p>
-															</div>
-														</div>
-													</a>
-													<?php include_once "./list-cancau/moicau.php" ?>
-												</div>
-
-												<div class="block-danhmuc danhmuc5">
-													<a class="plain" href="#">
-														<div class="icon-box featured-box icon-box-left text-left" style="margin:0px 0px 10px 0px;">
-															<div class="icon-box-img" style="width: 30px">
-																<div class="icon">
-																	<div class="icon-inner">
-																		<img width="300" height="300" src="<?= $config ?>/wp-content/uploads/2022/01/basketball-300x300.png" class="attachment-medium size-medium" alt="" loading="lazy" srcset="<?= $config ?>/wp-content/uploads/2022/01/basketball-300x300.png 300w, /wp-content/uploads/2022/01/basketball-150x150.png 150w, /wp-content/uploads/2022/01/basketball.png 512w" sizes="(max-width: 300px) 100vw, 300px">
-																	</div>
-																</div>
-															</div>
-															<div class="icon-box-text last-reset">
-
-																<p>Lưỡi câu</p>
-															</div>
-														</div>
-													</a>
-													<?php include_once "./list-cancau/luoicau.php" ?>
-												</div>
-
-												<div class="block-danhmuc danhmuc6">
-													<a class="plain" href="#">
-														<div class="icon-box featured-box icon-box-left text-left" style="margin:0px 0px 10px 0px;">
-															<div class="icon-box-img" style="width: 30px">
-																<div class="icon">
-																	<div class="icon-inner">
-																		<img width="300" height="300" src="<?= $config ?>/wp-content/uploads/2022/01/rings-300x300.png" class="attachment-medium size-medium" alt="" loading="lazy" srcset="<?= $config ?>/wp-content/uploads/2022/01/rings-300x300.png 300w, /wp-content/uploads/2022/01/rings-150x150.png 150w, /wp-content/uploads/2022/01/rings.png 512w" sizes="(max-width: 300px) 100vw, 300px">
-																	</div>
-																</div>
-															</div>
-															<div class="icon-box-text last-reset">
-
-																<p>Phao câu</p>
-															</div>
-														</div>
-													</a>
-													<?php include_once "./list-cancau/phaocau.php" ?>
-												</div> -->
 
 												<a class="plain" href="#">
 													<div class="icon-box featured-box icon-box-left text-left" style="margin:0px 0px 10px 0px;">
@@ -1113,7 +1020,9 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 														<?php while ($row_banner = mysqli_fetch_array($query_banner)) { ?>
 															<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_966265588">
 																<div class="img-inner image-cover dark" style="padding-top:400px;">
-																	<img width="300" height="213" src="<?= $config ?>/wp-content/uploads/2022/01/inside-weather-eAzLO5tr2_c-unsplash-small-300x213.jpg" class="attachment-medium size-medium" alt="" loading="lazy" srcset="<?= $config ?>/wp-content/uploads/2022/01/inside-weather-eAzLO5tr2_c-unsplash-small-300x213.jpg 300w, /wp-content/uploads/2022/01/inside-weather-eAzLO5tr2_c-unsplash-small-768x544.jpg 768w, /wp-content/uploads/2022/01/inside-weather-eAzLO5tr2_c-unsplash-small.jpg 800w" sizes="(max-width: 300px) 100vw, 300px">
+																	<img width="300" height="213" src="<?= $config ?>/img/<?= $row_banner['file_upload'] ?>" 
+																	class="attachment-medium size-medium" alt="" loading="lazy" 
+																	sizes="(max-width: 300px) 100vw, 300px">
 																</div>
 
 																<style>
