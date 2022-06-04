@@ -11,7 +11,7 @@ include_once '../layout/header.php';
 
 <div class="container mt-4">
     <div style="background-color: #446084;">
-        <h4 class="text-aligncenter" style="color: white; line-height: 40px; padding-left: 15px; text-transform: uppercase;">GIỎ HÀNG anhbafishing</h4>
+        <h4 class="text-aligncenter" style="color: white; line-height: 40px; padding-left: 15px; text-transform: uppercase; font-weight: 500;">GIỎ HÀNG anhbafishing</h4>
 
     </div>
     <form class="form_tb_cart" method="get">
@@ -65,7 +65,9 @@ include_once '../layout/header.php';
                             <i class="fas fa-angle-double-left"></i>
                             Trượt sang phải
                         </div>
-                        <a class="btn btn-info" href="<?= $config ?>/index.php">Chọn thêm sản phẩm</a>
+                        <a class="btn btn-info" href="<?= $config ?>/index.php" style="background-color: #446084; color:#ffffff; border-color:#ffffff">
+                            Chọn thêm sản phẩm
+                        </a>
                     </th>
                     <td>
                         
@@ -79,7 +81,7 @@ include_once '../layout/header.php';
                         <!-- <button type="submit" class="btn btn-info">
                             Thực hiện mua hàng
                         </button> -->
-                        <a href="./cart_bill.php" class="btn btn-info">
+                        <a href="./cart_bill.php" class="btn" style="background-color: #446084; color:#ffffff; border-color:#ffffff">
                             Thực hiện mua hàng
                         </a>
                     </td>
@@ -89,4 +91,47 @@ include_once '../layout/header.php';
     </form>
 </div>
 <?php include_once '../layout/footer.php'; ?>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="<?= $config ?>/assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="<?= $config ?>/assets/fonts/flaticon.css">
+<link rel="stylesheet" href="<?= $config ?>/assets/css/nice-select.min.css">
+<link rel="stylesheet" href="<?= $config ?>/assets/css/boxicons.min.css">
+<link rel="stylesheet" href="<?= $config ?>/assets/css/meanmenu.css">
+<link rel="stylesheet" type="text/css" href="<?= $config ?>/assets/css/settings.css">
+<link rel="stylesheet" type="text/css" href="<?= $config ?>/assets/css/layers.css">
+<link rel="stylesheet" type="text/css" href="<?= $config ?>/assets/css/navigation.css">
+<link rel="stylesheet" href="<?= $config ?>/assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="<?= $config ?>/assets/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="<?= $config ?>/assets/css/modal-video.min.css">
+<link rel="stylesheet" href="<?= $config ?>/assets/css/style.css">
+<link rel="stylesheet" href="<?= $config ?>/assets/css/responsive.css">
+<link rel="icon" type="image/png" href="<?= $config ?>/assets/images/favicon.png">
+
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="<?= $config ?>/assets/js/jquery.min.js"></script>
+<script src="<?= $config ?>/assets/js/popper.min.js"></script>
+<script src="<?= $config ?>/assets/js/bootstrap.min.js"></script>
+<script src="<?= $config ?>/assets/js/form-validator.min.js"></script>
+<script src="<?= $config ?>/assets/js/contact-form-script.js"></script>
+<script src="<?= $config ?>/assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="<?= $config ?>/assets/js/jquery.nice-select.min.js"></script>
+<script src="<?= $config ?>/assets/js/jquery.meanmenu.js"></script>
+<script src="<?= $config ?>/assets/js/jquery.themepunch.tools.min.js"></script>
+<script src="<?= $config ?>/assets/js/jquery.themepunch.revolution.min.js"></script>
+<script src="<?= $config ?>/assets/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="<?= $config ?>/assets/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="<?= $config ?>/assets/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="<?= $config ?>/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="<?= $config ?>/assets/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="<?= $config ?>/assets/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="<?= $config ?>/assets/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="<?= $config ?>/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="<?= $config ?>/assets/js/extensions/revolution.extension.video.min.js"></script>
+<script src="<?= $config ?>/assets/js/jquery.mixitup.min.js"></script>
+<script src="<?= $config ?>/assets/js/owl.carousel.min.js"></script>
+<script src="<?= $config ?>/assets/js/jquery-modal-video.min.js"></script>
+<script src="<?= $config ?>/assets/js/thumb-slide.js"></script>
+<script src="<?= $config ?>/assets/js/custom.js"></script>
+<?php include_once '../layout/newfooter.php'; ?>
 <?php include_once '../connecting/footing.php'; ?>

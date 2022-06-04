@@ -200,3 +200,4 @@ include_once '../layout/header.php';
     <script src="<?= $config ?>/assets/js/custom.js"></script>
 </body>
 <?php include_once '../layout/footer.php'; ?>
+<?php include_once '../layout/newfooter.php'; ?>

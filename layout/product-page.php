@@ -316,3 +316,4 @@ if(isset($_GET['id_sp'])){
 
 <script src="<?= $config ?>/assets/js/custom.js"></script>
 <?php include_once '../layout/footer.php'; ?>
+<?php include_once '../layout/newfooter.php'; ?>

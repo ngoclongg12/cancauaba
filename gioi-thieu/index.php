@@ -154,4 +154,5 @@ include_once '../layout/header.php';
 <script src="<?= $config ?>/assets/js/custom.js"></script>
 <?php
 include_once '../layout/footer.php';
+include_once '../layout/newfooter.php';
 ?>

@@ -1910,6 +1910,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 
 		<?php include_once'./connecting/script-custom.php'; ?>
 		<?php include_once'./layout/footer.php'; ?>
+		<?php include_once'./layout/newfooter.php'; ?>
 	
 </body>
 

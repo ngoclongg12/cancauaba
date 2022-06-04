@@ -225,4 +225,5 @@ $query = mysqli_query($connect, $sql);
 
 <script src="<?= $config ?>/assets/js/custom.js"></script>
 <?php include_once './layout/footer.php'; ?>
+<?php include_once './layout/newfooter.php'; ?>
 <?php include_once './connecting/footing.php'; ?>
