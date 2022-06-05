@@ -30,9 +30,9 @@ for ($i = 1; $i <= $totalPage; $i++) {
         $y = $_GET["page_filter"] + 1;
     }
 
-    $prevPg = '<li class="page-item"><a class="page-link" href="./search.php?s=' . $text . '&page_filter=' . $x . '" aria-label="Previous"><span aria-hidden="true"><i class="fas fa-angle-left"></i></span></a></li>';
+    $prevPg = '<li class="page-item"><a class="page-link" href="./search.php?s=' . $text . '&page_filter=' . $x . '" aria-label="Previous">Previous</span></a></li>';
     $listPrd .= '<li class="page-item"><a class="page-link pageNumber'.$i.'" href="./search.php?s=' . $text . '&page_filter=' . $i . '">' . $i . '</a></li>';
-    $nextPg = '<li class="page-item"><a class="page-link" href="./search.php?s=' . $text . '&page_filter=' . $y . '" aria-label="Next"><span aria-hidden="true"><i class="fas fa-angle-right"></i></span></a></li>';
+    $nextPg = '<li class="page-item"><a class="page-link" href="./search.php?s=' . $text . '&page_filter=' . $y . '" aria-label="Next"><span aria-hidden="true">Next</span></a></li>';
 }
 $sql = "SELECT * FROM danhsach_sp WHERE Name LIKE ('$textFix') ORDER BY ID ASC LIMIT $perRow,$pageRow";
 $query = mysqli_query($connect, $sql);
@@ -72,11 +72,12 @@ $query = mysqli_query($connect, $sql);
     }
 
     .box-text-inner {
-        min-height: 100px;
+        min-height: 120px;
     }
     .box-text-inner h4 {
         overflow: hidden;
         text-overflow: ellipsis;
+        max-height: 95px;
     }
 
     .box-text-inner h4:hover {
@@ -109,6 +110,18 @@ $query = mysqli_query($connect, $sql);
         <img src="<?= $config ?>/assets/images/shape18.png" alt="Shape">
     </div>
 </div>
+
+<form method="get" class="mt-5" style="max-width: 460px; margin: auto" >
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" name="s" placeholder="Nhập từ khoá...">
+        <div class="input-group-append">
+            <span>
+                <button class="btn btn-secondary" style="border: none;" type="submit">Tìm kiếm</button>
+            </span>
+        </div>
+    </div>
+</form>
+
 <div class="container-fluid" style="background-color: white">
     <div class="mt-4" style="background-color: #446084;">
         <div class="container">
@@ -125,7 +138,7 @@ $query = mysqli_query($connect, $sql);
         <?php
         while ($row = mysqli_fetch_array($query)) {
         ?>
-            <a href="./layout/product-page.php?id_sp=<?= $row['ID'] ?>" id="col-1264949517" class="col-md-3">
+            <a href="./layout/product-page.php?id_sp=<?= $row['ID'] ?>" class="col-md-3 p-3">
                 <div class="col-inner">
                     <div class="box has-hover   has-hover box-shadow-1 box-text-bottom">
                         <div class="box-image">
