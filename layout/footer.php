@@ -199,3 +199,72 @@
 		/* ]]> */
 	</script>
 	<script type="text/javascript" src="<?= $config ?>/wp-content/themes/flatsome/assets/js/flatsome.js?ver=3.12.1" id="flatsome-js-js"></script>
+	
+	<!-- sitdbar-mobile -->
+	<div id="main-menu" class="mobile-sidebar no-scrollbar mfp-hide">
+		<div class="sidebar-menu no-scrollbar ">
+			<ul class="nav nav-sidebar nav-vertical nav-uppercase">
+				<li class="header-search-form search-form html relative has-icon">
+					<div class="header-search-form-wrapper">
+						<div class="searchform-wrapper ux-search-box relative form-flat is-normal">
+							<form method="get" class="searchform" action="httpscancauaba.xyz/" role="search">
+								<div class="flex-row relative">
+									<div class="flex-col flex-grow">
+										<input type="search" class="search-field mb-0" name="s" value="" id="s"
+											placeholder="Tìm kiếm...">
+									</div>
+									<div class="flex-col">
+										<button type="submit"
+											class="ux-search-submit submit-button secondary button icon mb-0"
+											aria-label="Submit">
+											<!-- <i class="icon-search"></i>  -->
+											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+												fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+												<path
+													d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="live-search-results text-left z-top"></div>
+							</form>
+						</div>
+					</div>
+				</li>
+				<li
+					class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-20">
+					<a href="<?= $config ?>" aria-current="page">Trang chủ</a></li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a
+						href="<?= $config ?>/can-cau/">Cần câu</a></li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a
+						href="<?= $config ?>kinh-nghiem/">Kinh nghiệm</a></li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a
+						href="<?= $config ?>/lien-he/">Liên hệ</a></li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162"><a
+						href="<?= $config ?>gioi-thieu/">Giới thiệu</a></li>
+				WooCommerce not Found<li class="header-newsletter-item has-icon">
+
+					<a href="#header-newsletter-signup" class="tooltip" title="Sign up for Newsletter">
+
+						<i class="icon-envelop"></i>
+						<span class="header-newsletter-title">
+							Newsletter </span>
+					</a>
+
+				</li>
+				<li class="html header-social-icons ml-0">
+					<div class="social-icons follow-icons">
+						<a href="http://url/" target="_blank" data-label="Facebook" rel="noopener noreferrer nofollow"
+							class="icon plain facebook tooltip" title="Follow on Facebook"><i
+								class="icon-facebook"></i></a><a href="http://url/" target="_blank"
+							rel="noopener noreferrer nofollow" data-label="Instagram" class="icon plain  instagram tooltip"
+							title="Follow on Instagram"><i class="icon-instagram"></i></a><a href="http://url/"
+							target="_blank" data-label="Twitter" rel="noopener noreferrer nofollow"
+							class="icon plain  twitter tooltip" title="Follow on Twitter"><i class="icon-twitter"></i></a><a
+							href="mailto:your@email" data-label="E-mail" rel="nofollow" class="icon plain  email tooltip"
+							title="Send us an email"><i class="icon-envelop"></i></a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
