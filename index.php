@@ -12,6 +12,9 @@ $query_danhmuc = mysqli_query($connect, $danhmuc);
 $banner = "SELECT * FROM danhsach_banner ORDER BY id_banner DESC LIMIT 2";
 $query_banner = mysqli_query($connect, $banner);
 
+$under_banner = "SELECT * FROM danhsach_under_banner ORDER BY id DESC LIMIT 3";
+$query_under_banner = mysqli_query($connect, $under_banner);
+
 $product_new1 = "SELECT * FROM danhsach_sp ORDER BY ID DESC LIMIT 1,4";
 $query_product_new1 = mysqli_query($connect, $product_new1);
 
@@ -1042,70 +1045,9 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 											</div>
 										</div>
 
-
-
-										<div id="col-1268079618" class="col medium-8 small-12 large-4">
-											<div class="col-inner">
-
-
-												<div class="box has-hover   has-hover box-shade dark box-text-bottom">
-
-													<div class="box-image">
-														<div class="image-cover" style="padding-top:70%;">
-															<img width="800" height="435" src="<?= $config ?>/wp-content/uploads/2022/01/revolt-eeEsmrTVH7Q-unsplash-small.jpg" class="attachment- size-" alt="" loading="lazy" srcset="<?= $config ?>/wp-content/uploads/2022/01/revolt-eeEsmrTVH7Q-unsplash-small.jpg 800w, /wp-content/uploads/2022/01/revolt-eeEsmrTVH7Q-unsplash-small-300x163.jpg 300w, /wp-content/uploads/2022/01/revolt-eeEsmrTVH7Q-unsplash-small-768x418.jpg 768w" sizes="(max-width: 800px) 100vw, 800px">
-															<div class="shade"></div>
-														</div>
-													</div>
-
-													<div class="box-text text-left">
-														<div class="box-text-inner">
-
-															<h4>Công nghệ: Tiên tiến</h4>
-															<p>Enjoy luxury sound</p>
-															<a class="button primary is-small">
-																<span>Shop now</span>
-															</a>
-
-														</div>
-													</div>
-												</div>
-
-											</div>
-										</div>
-
-
-
-										<div id="col-1542665606" class="col medium-6 small-12 large-4">
-											<div class="col-inner">
-
-
-												<div class="box has-hover   has-hover box-shade dark box-text-bottom">
-
-													<div class="box-image">
-														<div class="image-cover" style="padding-top:70%;">
-															<img width="800" height="420" src="<?= $config ?>/wp-content/uploads/2022/01/olena-sergienko-InlMkMNlrhY-unsplash-small.jpg" class="attachment- size-" alt="" loading="lazy" srcset="<?= $config ?>/wp-content/uploads/2022/01/olena-sergienko-InlMkMNlrhY-unsplash-small.jpg 800w, /wp-content/uploads/2022/01/olena-sergienko-InlMkMNlrhY-unsplash-small-300x158.jpg 300w, /wp-content/uploads/2022/01/olena-sergienko-InlMkMNlrhY-unsplash-small-768x403.jpg 768w" sizes="(max-width: 800px) 100vw, 800px">
-															<div class="shade"></div>
-														</div>
-													</div>
-
-													<div class="box-text text-left">
-														<div class="box-text-inner">
-
-															<h4>Giá thành: Cạnh tranh</h4>
-															<p>Because life is good</p>
-															<a class="button primary is-small">
-																<span>Shop now</span>
-															</a>
-
-														</div>
-													</div>
-												</div>
-
-											</div>
-										</div>
-
-
-
+										<?php
+										while ($row_under_banner = mysqli_fetch_array($query_under_banner)) { 
+										?>
 										<div id="col-1589025588" class="col medium-6 small-12 large-4">
 											<div class="col-inner">
 
@@ -1114,7 +1056,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 
 													<div class="box-image">
 														<div class="image-cover" style="padding-top:70%;">
-															<img width="800" height="533" src="<?= $config ?>/wp-content/uploads/2022/01/inside-weather-OzqieLcs464-unsplash-small.jpg" class="attachment- size-" alt="" loading="lazy" srcset="<?= $config ?>/wp-content/uploads/2022/01/inside-weather-OzqieLcs464-unsplash-small.jpg 800w, /wp-content/uploads/2022/01/inside-weather-OzqieLcs464-unsplash-small-300x200.jpg 300w, /wp-content/uploads/2022/01/inside-weather-OzqieLcs464-unsplash-small-768x512.jpg 768w" sizes="(max-width: 800px) 100vw, 800px">
+															<img width="800" height="533" src="<?= $config ?>/img/<?= $row_under_banner['file_upload'] ?>" class="attachment- size-" alt="" loading="lazy" sizes="(max-width: 800px) 100vw, 800px">
 															<div class="shade"></div>
 														</div>
 													</div>
@@ -1122,8 +1064,8 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 													<div class="box-text text-left">
 														<div class="box-text-inner">
 
-															<h4>Uy tín tạo niềm tin</h4>
-															<p>Take a seat</p>
+															<h4><?= $row_under_banner['title'] ?></h4>
+															<p><?= $row_under_banner['content'] ?></p>
 															<a class="button primary is-small">
 																<span>Shop now</span>
 															</a>
@@ -1134,7 +1076,9 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 
 											</div>
 										</div>
-
+										<?php
+										}
+										?>
 
 									</div>
 								</div>

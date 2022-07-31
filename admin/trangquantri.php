@@ -29,6 +29,14 @@ if (isset($_GET['Admin'])) {
         case "banner_show":
             include_once '../Admin_layout/Banner/Banner_show.php';
             break;
+        
+        case "under_banner":
+            include_once '../Admin_layout/Banner/UnderBanner.php';
+            break;
+
+        case "best-selling":
+            include_once '../Admin_layout/Block/BestSellingProduct.php';
+            break;
 
         case "order":
             include_once '../Admin_layout/Order/order_list.php';
@@ -97,6 +105,8 @@ if (isset($_GET['Admin'])) {
     <!-- Theme style -->
     <link rel="stylesheet" href="../library/dist/css/adminlte.min.css">
 
+    <link rel="stylesheet" href="../library/selector.css">
+    
     <?php
     include_once "../connecting/heading.php"
     ?>
