@@ -11,14 +11,9 @@ $pagePerRow = 5;
 
 $pageRow = $page_prd * $pagePerRow - $pagePerRow;
 
-$sql = "SELECT * FROM danhsach_dm ORDER BY ID ASC LIMIT $pageRow, $pagePerRow";
+$sql = "SELECT * FROM danhsach_dm ORDER BY id ASC LIMIT $pageRow, $pagePerRow";
 $query = mysqli_query($connect, $sql);
 $row = mysqli_fetch_all($query);
-// echo'<pre>';
-// print_r($row);
-// echo'</pre>';
-
-// die;
 
 $totalRow = mysqli_num_rows(mysqli_query($connect, "SELECT * FROM danhsach_dm"));
 $totalPage = ceil($totalRow / $pagePerRow);
@@ -39,13 +34,12 @@ for ($i = 1; $i <= $totalPage; $i++) {
         $x = $_GET['page_category'] - 1;
         $y = $totalPage;
     }
-    // <i class="fas fa-angle-double-left"></i>
-    // <i class="fas fa-angle-double-right"></i>
+
     if ($page_prd == $i) {
         $prevPage = '
         <li class="page-item">
         <a class="page-link" 
-        href="http://localhost/cancauaba/admin/trangQuanTri.php?Admin=category_show&page_category='.$x.'" 
+        href="'. $configAdmin .'/admin/trangQuanTri.php?Admin=category_show&page_category='.$x.'" 
         aria-label="Previous">
         <span aria-hidden="true"><i class="fas fa-angle-left"></i></span>
         </a>
@@ -54,7 +48,7 @@ for ($i = 1; $i <= $totalPage; $i++) {
         $nextPage = '
         <li class="page-item">
         <a class="page-link" 
-        href="http://localhost/cancauaba/admin/trangQuanTri.php?Admin=category_show&page_category='.$y.'" 
+        href="'. $configAdmin .'/admin/trangQuanTri.php?Admin=category_show&page_category='.$y.'" 
         aria-label="Next">
         <span aria-hidden="true"><i class="fas fa-angle-right"></i></span>
         </a>
@@ -82,16 +76,16 @@ for ($i = 1; $i <= $totalPage; $i++) {
     </thead>
     <tbody>
         <?php
-        foreach ($row as $key=>$row) {
+        foreach ($row as $row) {
         ?>
             <tr>
                 <td><?= $row['0'] ?></td>
                 <td><?= $row['1'] ?></td>
                 <td>
-                    <a class="btn btn-primary btn-sm" href="../public/TrangQuanTri.php?Admin=category_fix&id_dm=<?= $row["ID"] ?>">
+                    <a class="btn btn-primary btn-sm" href="<?= $configAdmin ?>/public/TrangQuanTri.php?Admin=category_fix&id=<?= $row["0"] ?>">
                         <i class="fas fa-edit"></i>
                     </a>
-                    <a onclick="return product_del()" class="btn btn-danger btn-sm" href="../Admin_layout/Category/category_del.php?id_dm=<?= $row["ID"] ?>">
+                    <a onclick="return product_del()" class="btn btn-danger btn-sm" href="<?= $configAdmin ?>/Admin_layout/Category/category_del.php?id=<?= $row["0"] ?>">
                         <i class="fas fa-trash-alt"></i>
                     </a>
                 </td>

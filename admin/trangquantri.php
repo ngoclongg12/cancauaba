@@ -3,6 +3,8 @@
 session_start();
 
 include_once $_SERVER['DOCUMENT_ROOT'] . '/Cancauaba/connecting/connectDB.php';
+$configAdmin = include_once '../config/config.php';
+
 
 if (!$_SESSION["hoTen"]) {
     header("location: ../login/Dangnhap.php");
@@ -13,7 +15,6 @@ if ($_SESSION["quyen"] == 1) {
 }
 
 $content = "";
-// echo $content;
 if (isset($_GET['Admin'])) {
     switch ($_GET['Admin']) {
 
@@ -69,11 +70,6 @@ if (isset($_GET['Admin'])) {
             include_once "../Admin_layout/Category/category_fix.php";
             break;
 
-
-
-            // case "product_del":
-            //     include_once "../Admin_layout/Product/product_del.php";
-            //     break;
     }
 } else {
     include_once '../Admin_layout/manage_main.php';
