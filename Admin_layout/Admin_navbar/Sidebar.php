@@ -143,14 +143,6 @@
                                 <p>Danh sách danh mục</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="../admin/trangquantri.php?Admin=category_add" class="nav-link" onclick="QuangCao()">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Thêm danh mục mới</p>
-                            </a>
-                        </li>
-
-
                     </ul>
                 </li>
                 <li class="nav-item">

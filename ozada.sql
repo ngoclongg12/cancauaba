@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th3 08, 2022 lúc 06:33 PM
--- Phiên bản máy phục vụ: 10.4.20-MariaDB
--- Phiên bản PHP: 7.4.22
+-- Thời gian đã tạo: Th8 06, 2022 lúc 04:21 PM
+-- Phiên bản máy phục vụ: 10.4.22-MariaDB
+-- Phiên bản PHP: 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -48,6 +48,84 @@ INSERT INTO `danhsach_banner` (`id_banner`, `file_upload`, `created_at`, `update
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `danhsach_dm`
+--
+
+CREATE TABLE `danhsach_dm` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `danhsach_dm`
+--
+
+INSERT INTO `danhsach_dm` (`id`, `name`) VALUES
+(1, 'Câu Đơn / Câu Đài'),
+(2, 'Câu Lục'),
+(3, 'Dây Câu'),
+(4, 'Lưỡi Câu'),
+(5, 'Phao Câu'),
+(6, 'Mồi Câu'),
+(7, 'Thời Trang Câu');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `danhsach_dm_con`
+--
+
+CREATE TABLE `danhsach_dm_con` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `id_dm` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `danhsach_dm_con`
+--
+
+INSERT INTO `danhsach_dm_con` (`id`, `name`, `id_dm`) VALUES
+(1, 'Cần Câu Đơn / Đài', '1'),
+(2, 'Dây Câu Đài', '1'),
+(3, 'Phao Câu Đài', '1'),
+(4, 'Mồi Câu Đài', '1'),
+(5, 'Lưỡi Câu Đơn / Đài', '1'),
+(6, 'Mồi Câu Đài', '1'),
+(7, 'Thùng - Hộp - Bàn Đài', '1'),
+(8, 'Thời Trang Câu', '1'),
+(9, 'Phụ Kiện Câu Đài', '1'),
+(10, 'Cần Câu Đơn / Đài', '4'),
+(11, 'Dây Câu Đài', '4'),
+(12, 'Phao Câu Đài', '4'),
+(13, 'Mồi Câu Đài', '4'),
+(14, 'Lưỡi Câu Đơn / Đài', '4'),
+(15, 'Mồi Câu Đài', '4'),
+(16, 'Thùng - Hộp - Bàn Đài', '4'),
+(17, 'Thời Trang Câu', '4'),
+(18, 'Phụ Kiện Câu Đài', '4'),
+(19, 'Cần Câu Đơn / Đài', '2'),
+(20, 'Dây Câu Đài', '2'),
+(21, 'Phao Câu Đài', '2'),
+(22, 'Mồi Câu Đài', '2'),
+(23, 'Lưỡi Câu Đơn / Đài', '2'),
+(24, 'Mồi Câu Đài', '21'),
+(25, 'Thùng - Hộp - Bàn Đài', '2'),
+(26, 'Thời Trang Câu', '2'),
+(27, 'Phụ Kiện Câu Đài', '2'),
+(28, 'Cần Câu Đơn / Đài', '3'),
+(29, 'Dây Câu Đài', '3'),
+(30, 'Phao Câu Đài', '3'),
+(31, 'Mồi Câu Đài', '3'),
+(32, 'Lưỡi Câu Đơn / Đài', '3'),
+(33, 'Mồi Câu Đài', '3'),
+(34, 'Thùng - Hộp - Bàn Đài', '3'),
+(35, 'Thời Trang Câu', '3'),
+(36, 'Phụ Kiện Câu Đài', '3');
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `danhsach_donhang`
 --
 
@@ -82,7 +160,9 @@ INSERT INTO `danhsach_donhang` (`id_dh`, `Donhang`, `Name`, `Address`, `Phone`, 
 (71, '15/1 14/1 ', 'Văn Toản', 'Hải Phòng Hoa Phương đỏ', '0764599696', 'Đang xử lý', '7043210', '04-11-2021 05:00:11 PM', NULL, 2),
 (72, '12/1 ', 'Ngọc Long', 'Hà Nội', '0373295525', 'Done', '6789000', '04-11-2021 07:15:44 PM', '25-02-2022 11:33:30 AM', 1),
 (73, '15/1 ', 'Khách Hàng', 'Quảng Bình', '0966552184', 'Đang xử lý', '543210', '05-11-2021 03:39:33 PM', NULL, 1),
-(74, '9/3 ', 'Phạm Ngọc Long', '13', '0373295525', 'Shipping', '16296000', '16-01-2022 09:51:37 PM', '16-01-2022 09:52:25 PM', 1);
+(74, '9/3 ', 'Phạm Ngọc Long', '13', '0373295525', 'Shipping', '16296000', '16-01-2022 09:51:37 PM', '16-01-2022 09:52:25 PM', 1),
+(75, '4/1 ', 'Ngọc Long', 'Ứng Hoà - HN', '0373295525', 'Đang xử lý', '500000', '11-07-2022 03:14:00 PM', NULL, 1),
+(76, '4/2 1/1 ', 'Ngọc Long', 'Ứng Hoà - HN', '0373295525', 'Đang xử lý', '1050000', '06-08-2022 08:56:58 PM', NULL, 2);
 
 -- --------------------------------------------------------
 
@@ -148,6 +228,35 @@ INSERT INTO `danhsach_sp` (`ID`, `Name`, `Status`, `Price`, `Top`, `Image`) VALU
 (15, 'Bộ mỹ phẩm cao cấp MAC', 9, '543210', 0, 'img14.jpg'),
 (16, 'Vinhomes Ocean-Park', 2222, '5432100000', 0, 'img15.jpg');
 
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `danhsach_under_banner`
+--
+
+CREATE TABLE `danhsach_under_banner` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `content` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `file_upload` varchar(255) NOT NULL,
+  `created_at` varchar(255) NOT NULL,
+  `updated_at` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `danhsach_under_banner`
+--
+
+INSERT INTO `danhsach_under_banner` (`id`, `title`, `content`, `file_upload`, `created_at`, `updated_at`) VALUES
+(21, '', '', 'Cho-–-ngu-–-ngay-–-nguyen-–-nhan-–-vi-–-dau-1.jpg', '04-11-2021 11:34:26 PM', ''),
+(22, '', '', 'hinh-cho-con-de-thuong-22.jpg', '04-11-2021 11:34:51 PM', ''),
+(23, 'Công nghệ: Tiên tiến', 'Enjoy luxury sound', 'image01.jpg', '04-11-2021 11:35:00 PM', ''),
+(24, 'Giá thành: Cạnh tranh', 'Because life is good', '97356662_158904898969021_4121615333532368896_o.jpg', '04-11-2021 11:54:59 PM', ''),
+(25, 'Uy tín tạo niềm tin', 'Take a seat', '95703845_155249282667916_767692191177900032_o.jpg', '05-11-2021 12:01:05 AM', ''),
+(26, 'Công nghệ: Tiên tiến', 'Enjoy luxury sound', 'olena-sergienko-InlMkMNlrhY-unsplash-small.jpg', '04-11-2021 11:35:00 PM', ''),
+(27, 'Giá thành: Cạnh tranh', 'Because life is good', 'olena-sergienko-InlMkMNlrhY-unsplash-small.jpg', '04-11-2021 11:54:59 PM', ''),
+(28, 'Uy tín tạo niềm tin', 'Take a seat', 'olena-sergienko-InlMkMNlrhY-unsplash-small.jpg', '05-11-2021 12:01:05 AM', '');
+
 --
 -- Chỉ mục cho các bảng đã đổ
 --
@@ -157,6 +266,18 @@ INSERT INTO `danhsach_sp` (`ID`, `Name`, `Status`, `Price`, `Top`, `Image`) VALU
 --
 ALTER TABLE `danhsach_banner`
   ADD PRIMARY KEY (`id_banner`);
+
+--
+-- Chỉ mục cho bảng `danhsach_dm`
+--
+ALTER TABLE `danhsach_dm`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `danhsach_dm_con`
+--
+ALTER TABLE `danhsach_dm_con`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Chỉ mục cho bảng `danhsach_donhang`
@@ -177,6 +298,12 @@ ALTER TABLE `danhsach_sp`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Chỉ mục cho bảng `danhsach_under_banner`
+--
+ALTER TABLE `danhsach_under_banner`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT cho các bảng đã đổ
 --
 
@@ -187,10 +314,22 @@ ALTER TABLE `danhsach_banner`
   MODIFY `id_banner` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
+-- AUTO_INCREMENT cho bảng `danhsach_dm`
+--
+ALTER TABLE `danhsach_dm`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT cho bảng `danhsach_dm_con`
+--
+ALTER TABLE `danhsach_dm_con`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+
+--
 -- AUTO_INCREMENT cho bảng `danhsach_donhang`
 --
 ALTER TABLE `danhsach_donhang`
-  MODIFY `id_dh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
+  MODIFY `id_dh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
 -- AUTO_INCREMENT cho bảng `danhsach_kh`
@@ -203,6 +342,12 @@ ALTER TABLE `danhsach_kh`
 --
 ALTER TABLE `danhsach_sp`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT cho bảng `danhsach_under_banner`
+--
+ALTER TABLE `danhsach_under_banner`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

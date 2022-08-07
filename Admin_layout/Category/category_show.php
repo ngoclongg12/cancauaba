@@ -7,7 +7,7 @@ if (isset($_GET['page_category'])) {
     $page_prd = 1;
 }
 
-$pagePerRow = 5;
+$pagePerRow = 7;
 
 $pageRow = $page_prd * $pagePerRow - $pagePerRow;
 
@@ -98,19 +98,6 @@ for ($i = 1; $i <= $totalPage; $i++) {
     </tbody>
 
 </table>
-
-<div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-4">
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                <?= $listPage ?>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <div class="col-md-4"></div>
-</div>
 
 <?php
 $content = ob_get_clean();

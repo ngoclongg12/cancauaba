@@ -34,7 +34,7 @@ $query = mysqli_query($connect, $sql);
                 <td>
                     <select class="custom-select custom-select-sm cha_done" name="">
                         <option disabled selected hidden><?= $row['Status'] ?></option>
-                        <option value="<?= $row['id_dh'] ?>">Done !<?= $row['id_dh'] ?></option>
+                        <option style="color:white; background: green; font-weight: 700;" value="<?= $row['id_dh'] ?>">Done !</option>
                     </select>
                 </td>
                 <td><?= number_format($row['Bill']) ?>đ</td>
