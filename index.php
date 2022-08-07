@@ -940,8 +940,8 @@ $query_product_best_seller = mysqli_query($connect, $product_best_seller);
 													</style>
 												</div>
 
-												<a class="button primary expand">
-													<span>Sản phẩm khuyến mại</span>
+												<a href="<?= $config ?>/kinh-nghiem/" class="button primary expand">
+													<span>Chia sẻ kinh nghiệm câu</span>
 												</a>
 
 											</div>
@@ -988,9 +988,9 @@ $query_product_best_seller = mysqli_query($connect, $product_best_seller);
 
 																			<div class="text-inner text-center">
 
-																				<h3 class="uppercase">Change this to anything</h3>
-																				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-																				<a class="button white is-outline">
+																				<h3 class="uppercase">Sản phẩm ấn tượng</h3>
+																				<p>Bạn thuộc phong cách đi câu nào sẽ có cách lựa chọn cần câu tay tương ứng với phong cách đó.</p>
+																				<a href="<?= $config ?>/can-cau/" class="button white is-outline">
 																					<span>Click me</span>
 																				</a>
 
@@ -1019,7 +1019,7 @@ $query_product_best_seller = mysqli_query($connect, $product_best_seller);
 																}
 
 																#banner-40174143 .bg.bg-loaded {
-																	background-image: url('<?= $config ?>/wp-content/uploads/2022/01/inside-weather-kbPZmDxPK9M-unsplash-small.jpg');
+																	background-image: url('<?= $config ?>/img/image01.jpg');
 																}
 
 																#banner-40174143 .overlay {
@@ -1075,7 +1075,7 @@ $query_product_best_seller = mysqli_query($connect, $product_best_seller);
 
 															<h4><?= $row_under_banner['title'] ?></h4>
 															<p><?= $row_under_banner['content'] ?></p>
-															<a class="button primary is-small">
+															<a href="<?= $config ?>/can-cau/" class="button primary is-small">
 																<span>Shop now</span>
 															</a>
 
@@ -1194,7 +1194,7 @@ $query_product_best_seller = mysqli_query($connect, $product_best_seller);
 
 														</div>
 														<div class="banner-layers container">
-															<div class="fill banner-link"></div>
+															<div style="background-image: url(<?= $config ?>/img/2325952.jpg);background-size: cover;" class="fill banner-link"></div>
 														</div>
 													</div>
 
@@ -1221,10 +1221,14 @@ $query_product_best_seller = mysqli_query($connect, $product_best_seller);
 											<div class="col-inner">
 
 
-												<h3>We like to make it personal</h3>
-												<p><span style="text-decoration: underline">Justi</span> a great place for SEO text ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+												<h3>KHÔNG CHỈ LÀ MỘT THÚ CHƠI</h3>
+												<p>
+													Trong quá khứ khi nhắc đến câu cá thì sự mường tượng của người nghe chỉ là chiếc cần tre, sợi cước, lưỡi câu và
+													 hộp giun/trùn đào sau vườn nhà. Nó được xem như một trò tiêu khiển lúc rảnh rỗi. Nay mọi thứ đã thay đổi khi
+													  người chơi đã đầu tư rất nhiều tiền, công sức, thời gian và coi đó như một môn thể thao thường kỳ...
+												</p>
 												<a href="<?= $config ?>/gioi-thieu/" class="button primary">
-													<span>Read our story</span>
+													<span>Đọc thêm những câu chuyện</span>
 												</a>
 
 											</div>
@@ -1364,10 +1368,6 @@ $query_product_best_seller = mysqli_query($connect, $product_best_seller);
 							<section class="section" id="section_1309472409">
 								<div class="bg section-bg fill bg-fill  bg-loaded">
 
-
-
-
-
 								</div>
 
 								<div class="section-content relative">
@@ -1403,7 +1403,7 @@ $query_product_best_seller = mysqli_query($connect, $product_best_seller);
 															<form action="./cart/cart_process.php">
 																<input name="id_sp" value="<?= $row['ID'] ?>" type="hidden">
 																<input name="t" value="add" type="hidden">
-																<button class="button primary">Add to cart</button>
+																<button class="button primary">Giỏ hàng</button>
 															</form>
 														</div>
 														
@@ -1613,11 +1613,11 @@ $query_product_best_seller = mysqli_query($connect, $product_best_seller);
 
 															<h2>Get the best look today</h2>
 															<p>Great for photo &#038; video presentation </p>
-															<a class="button white">
+															<a href="<?= $config ?>/can-cau/" class="button white">
 																<span>Shop now</span>
 															</a>
 
-															<a class="button white is-outline">
+															<a href="<?= $config ?>/gioi-thieu/" class="button white is-outline">
 																<span>About</span>
 															</a>
 
