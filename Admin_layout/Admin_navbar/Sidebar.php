@@ -119,9 +119,21 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="../admin/trangquantri.php?Admin=product_best_seller" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Sản phẩm bán chạy</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../admin/trangquantri.php?Admin=product_new" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Sản phẩm mới</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="../admin/trangquantri.php?Admin=product_add" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Thêm sản phẩm mới</p>
+                                <p>Thêm sản phẩm</p>
                             </a>
                         </li>
 

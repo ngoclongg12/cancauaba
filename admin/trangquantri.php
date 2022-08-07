@@ -58,6 +58,14 @@ if (isset($_GET['Admin'])) {
             include_once "../Admin_layout/Product/product_add.php";
             break;
 
+        case "product_best_seller":
+            include_once "../Admin_layout/Product/product_best_seller.php";
+            break;
+
+        case "product_new":
+            include_once "../Admin_layout/Product/product_new.php";
+            break;
+
         case "product_show":
             include_once "../Admin_layout/Product/product_show.php";
             break;

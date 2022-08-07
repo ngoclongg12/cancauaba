@@ -12,10 +12,10 @@ $pagePerRow = 5;
 
 $pageRow = $page_prd * $pagePerRow - $pagePerRow;
 
-$sql = "SELECT * FROM danhsach_sp ORDER BY ID DESC LIMIT $pageRow, $pagePerRow";
+$sql = "SELECT * FROM danhsach_sp WHERE (Top = '2') ORDER BY ID DESC LIMIT $pageRow, $pagePerRow";
 $query = mysqli_query($connect, $sql);
 
-$totalRow = mysqli_num_rows(mysqli_query($connect, "SELECT * FROM danhsach_sp"));
+$totalRow = mysqli_num_rows(mysqli_query($connect, "SELECT * FROM danhsach_sp WHERE (Top = '2')"));
 $totalPage = ceil($totalRow / $pagePerRow);
 $listPage = "";
 $nextPage = "";
@@ -25,7 +25,6 @@ $y = 2;
 
 
 for ($i = 1; $i <= $totalPage; $i++) {
-
     if (isset($page_prd)) {
         $x = $page_prd - 1;
         $y = $page_prd + 1;
@@ -34,7 +33,7 @@ for ($i = 1; $i <= $totalPage; $i++) {
     $prevPage = '
             <li class="page-item">
             <a class="page-link" 
-            href="../admin/trangquantri.php?Admin=product_show&page_product=' . $x . '" 
+            href="../admin/trangquantri.php?Admin=product_new&page_product=' . $x . '" 
             aria-label="Previous">
             <span aria-hidden="true"><i class="fas fa-angle-left"></i></span>
             </a>
@@ -43,7 +42,7 @@ for ($i = 1; $i <= $totalPage; $i++) {
     $nextPage = '
             <li class="page-item">
             <a class="page-link" 
-            href="../admin/trangquantri.php?Admin=product_show&page_product=' . $y . '" 
+            href="../admin/trangquantri.php?Admin=product_new&page_product=' . $y . '" 
             aria-label="Next">
             <span aria-hidden="true"><i class="fas fa-angle-right"></i></span>
             </a>
@@ -51,10 +50,10 @@ for ($i = 1; $i <= $totalPage; $i++) {
 
     if ($page_prd == $i) {
 
-        $listPage .= '<li class="page-item active"><a class="page-link" href="../admin/trangquantri.php?Admin=product_show&page_product=' . $i . '">' . $i . '</a></li>';
+        $listPage .= '<li class="page-item active"><a class="page-link" href="../admin/trangquantri.php?Admin=product_new&page_product=' . $i . '">' . $i . '</a></li>';
     } else {
 
-        $listPage .= '<li class="page-item"><a class="page-link" href="../admin/trangquantri.php?Admin=product_show&page_product=' . $i . '">' . $i . '</a></li>';
+        $listPage .= '<li class="page-item"><a class="page-link" href="../admin/trangquantri.php?Admin=product_new&page_product=' . $i . '">' . $i . '</a></li>';
     }
 }
 
@@ -116,32 +115,38 @@ for ($i = 1; $i <= $totalPage; $i++) {
 
 </table>
 
-<div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-4">
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                <?php
-                if (isset($_GET['page_product']) && $_GET['page_product'] > 1) {
-                    echo $prevPage;
-                }
-                
-                ?>
-                <?= $listPage ?>
-                <?php
-                if (isset($_GET['page_product']) && $_GET['page_product'] < $totalPage) {
-                    echo $nextPage;
-                }
-                if(!isset($_GET['page_product'])){
-                    echo $nextPage;
-                }
-                ?>
-                </li>
-            </ul>
-        </nav>
+<?php 
+if ($totalPage != 1) {
+?>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <?php
+                    if (isset($_GET['page_product']) && $_GET['page_product'] > 1) {
+                        echo $prevPage;
+                    }
+                    
+                    ?>
+                    <?= $listPage ?>
+                    <?php
+                    if (isset($_GET['page_product']) && $_GET['page_product'] < $totalPage) {
+                        echo $nextPage;
+                    }
+                    if(!isset($_GET['page_product'])){
+                        echo $nextPage;
+                    }
+                    ?>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-4"></div>
     </div>
-    <div class="col-md-4"></div>
-</div>
+<?php 
+}
+?>
 
 <?php
 $content = ob_get_clean();

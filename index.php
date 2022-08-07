@@ -15,11 +15,27 @@ $query_banner = mysqli_query($connect, $banner);
 $under_banner = "SELECT * FROM danhsach_under_banner ORDER BY id DESC LIMIT 3";
 $query_under_banner = mysqli_query($connect, $under_banner);
 
-$product_new1 = "SELECT * FROM danhsach_sp ORDER BY ID DESC LIMIT 1,4";
+$product_new = "SELECT * FROM danhsach_sp WHERE (Top = 2)";
+$query_product_new = mysqli_query($connect, $product_new);
+$count_query_product_new = 0;
+$id_product_new2 = 1;
+while ($row_query_product_new = mysqli_fetch_array($query_product_new)) { 
+	$count_query_product_new++;
+	if ($count_query_product_new == 3) {
+		$id_product_new2 = $row_query_product_new['ID'];
+		// echo $id_product_new2.'->';
+	}
+	// echo $count_query_product_new;
+}
+
+$product_new1 = "SELECT * FROM danhsach_sp WHERE (Top = 2) ORDER BY ID DESC LIMIT 0,4";
 $query_product_new1 = mysqli_query($connect, $product_new1);
 
-$product_new2 = "SELECT * FROM danhsach_sp ORDER BY ID DESC LIMIT 4,4";
+$product_new2 = "SELECT * FROM danhsach_sp WHERE (Top = 2) ORDER BY ID DESC LIMIT $id_product_new2,4";
 $query_product_new2 = mysqli_query($connect, $product_new2);
+
+$product_best_seller = "SELECT * FROM danhsach_sp WHERE (Top = 1) ORDER BY ID DESC LIMIT 2";
+$query_product_best_seller = mysqli_query($connect, $product_best_seller);
 
 ?>
 <!DOCTYPE html>
@@ -831,21 +847,14 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 			</div>
 		</header>
 
-
 		<main id="main" class="">
 			<div id="content" class="content-area page-wrapper" role="main">
 				<div class="row row-main">
 					<div class="large-12 col">
 						<div class="col-inner">
 
-
-
 							<section class="section" id="section_1338031667">
 								<div class="bg section-bg fill bg-fill  bg-loaded">
-
-
-
-
 
 								</div>
 
@@ -1126,56 +1135,26 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 
 												<div class="row" id="row-1987135554">
 
-													<div id="col-1011914716" class="col medium-6 small-12 large-6">
-														<div class="col-inner">
-
-
-															<div class="box has-hover   has-hover box-text-bottom">
-
-																<div class="box-image">
-																	<div class="image-zoom-fade image-cover" style="padding-top:300px;">
-																		<img width="1200" height="588" src="<?= $config ?>/wp-content/uploads/2022/01/flatsome-video-placeholder.jpg" class="attachment- size-" alt="" loading="lazy" srcset="<?= $config ?>/wp-content/uploads/2022/01/flatsome-video-placeholder.jpg 1200w, /wp-content/uploads/2022/01/flatsome-video-placeholder-300x147.jpg 300w, /wp-content/uploads/2022/01/flatsome-video-placeholder-1024x502.jpg 1024w, /wp-content/uploads/2022/01/flatsome-video-placeholder-768x376.jpg 768w" sizes="(max-width: 1200px) 100vw, 1200px">
+													<?php while ($product_best_seller = mysqli_fetch_array($query_product_best_seller)) { ?>
+														<a href="./layout/product-page.php?id_sp=<?= $product_best_seller['ID'] ?>" id="col-1011914716" class="col medium-6 small-12 large-6">
+															<div class="col-inner">
+																<div class="box has-hover   has-hover box-text-bottom">
+																	<div class="box-image">
+																		<div class="image-zoom-fade image-cover" style="padding-top:300px;">
+																			<img width="1200" height="588" src="<?= $config ?>/img/<?= $product_best_seller['Image'] ?>" class="attachment- size-" alt="" loading="lazy" srcset="<?= $config ?>/img/<?= $product_best_seller['Image'] ?>" sizes="(max-width: 1200px) 100vw, 1200px">
+																		</div>
 																	</div>
-																</div>
+																	<div class="box-text text-center">
+																		<div class="box-text-inner">
 
-																<div class="box-text text-center">
-																	<div class="box-text-inner">
-
-																		<h4>Cần đôi nhập khẩu</h4>
-																		<p>Image Box text</p>
-																	</div>
-																</div>
-															</div>
-
-														</div>
-													</div>
-
-
-
-													<div id="col-865136307" class="col medium-6 small-12 large-6">
-														<div class="col-inner">
-
-
-															<div class="box has-hover   has-hover box-text-bottom">
-
-																<div class="box-image">
-																	<div class="image-zoom-fade image-cover" style="padding-top:300px;">
-																		<img width="800" height="420" src="<?= $config ?>/wp-content/uploads/2022/01/olena-sergienko-InlMkMNlrhY-unsplash-small.jpg" class="attachment- size-" alt="" loading="lazy" srcset="<?= $config ?>/wp-content/uploads/2022/01/olena-sergienko-InlMkMNlrhY-unsplash-small.jpg 800w, /wp-content/uploads/2022/01/olena-sergienko-InlMkMNlrhY-unsplash-small-300x158.jpg 300w, /wp-content/uploads/2022/01/olena-sergienko-InlMkMNlrhY-unsplash-small-768x403.jpg 768w" sizes="(max-width: 800px) 100vw, 800px">
-																	</div>
-																</div>
-
-																<div class="box-text text-center">
-																	<div class="box-text-inner">
-
-																		<h4>Thùng câu Polime</h4>
-																		<p>Image Box text</p>
+																			<h4><?= $product_best_seller['Name'] ?></h4>
+																			<p>SỐ LƯỢNG CÓ HẠN</p>
+																		</div>
 																	</div>
 																</div>
 															</div>
-
-														</div>
-													</div>
-
+														</a>
+													<?php } ?>
 
 												</div>
 											</div>
@@ -1196,10 +1175,6 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 
 							<section class="section" id="section_1063447660">
 								<div class="bg section-bg fill bg-fill  bg-loaded">
-
-
-
-
 
 								</div>
 
@@ -1248,7 +1223,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 
 												<h3>We like to make it personal</h3>
 												<p><span style="text-decoration: underline">Justi</span> a great place for SEO text ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-												<a class="button primary">
+												<a href="<?= $config ?>/gioi-thieu/" class="button primary">
 													<span>Read our story</span>
 												</a>
 
@@ -1308,13 +1283,19 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 											<div class="row" id="row-943052080">
 
 												<?php while($row_product_new1 = mysqli_fetch_array($query_product_new1)) {?>
-												<div id="col-2082039593" class="col medium-3 small-6 large-3">
+												<a href="./layout/product-page.php?id_sp=<?= $row_product_new1['ID'] ?>" id="col-2082039593" class="col medium-3 small-6 large-3">
 													<div class="col-inner">
 
 
 														<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1652695089">
 															<div class="img-inner image-cover dark" style="padding-top:160px;">
-																<img width="800" height="567" src="<?= $config ?>/wp-content/uploads/2022/01/inside-weather-eAzLO5tr2_c-unsplash-small.jpg" class="attachment-large size-large" alt="" loading="lazy" srcset="<?= $config ?>/wp-content/uploads/2022/01/inside-weather-eAzLO5tr2_c-unsplash-small.jpg 800w, /wp-content/uploads/2022/01/inside-weather-eAzLO5tr2_c-unsplash-small-300x213.jpg 300w, /wp-content/uploads/2022/01/inside-weather-eAzLO5tr2_c-unsplash-small-768x544.jpg 768w" sizes="(max-width: 800px) 100vw, 800px">
+																<img width="800" height="567" src="<?= $config ?>/img/<?= $row_product_new1['Image'] ?>" class="attachment-large size-large" alt="" loading="lazy" srcset="<?= $config ?>/img/<?= $row_product_new1['Image'] ?> " sizes="(max-width: 800px) 100vw, 800px">
+															</div>
+															<div class="box-text text-center">
+																<div class="box-text-inner">
+
+																	<h4><?= $row_product_new1['Name'] ?></h4>
+																</div>
 															</div>
 
 															<style>
@@ -1325,7 +1306,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 														</div>
 
 													</div>
-												</div>
+												</a>
 												<?php } ?>
 
 
@@ -1334,15 +1315,20 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 											<div class="row" id="row-943052081">
 
 												<?php while($row_product_new2 = mysqli_fetch_array($query_product_new2)) {?>
-												<div id="col-2082039593" class="col medium-3 small-6 large-3">
+												<a href="./layout/product-page.php?id_sp=<?= $row_product_new2['ID'] ?>" id="col-2082039593" class="col medium-3 small-6 large-3">
 													<div class="col-inner">
 
 
 														<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1652695089">
 															<div class="img-inner image-cover dark" style="padding-top:160px;">
-																<img width="800" height="567" src="<?= $config ?>/wp-content/uploads/2022/01/inside-weather-eAzLO5tr2_c-unsplash-small.jpg" class="attachment-large size-large" alt="" loading="lazy" srcset="<?= $config ?>/wp-content/uploads/2022/01/inside-weather-eAzLO5tr2_c-unsplash-small.jpg 800w, /wp-content/uploads/2022/01/inside-weather-eAzLO5tr2_c-unsplash-small-300x213.jpg 300w, /wp-content/uploads/2022/01/inside-weather-eAzLO5tr2_c-unsplash-small-768x544.jpg 768w" sizes="(max-width: 800px) 100vw, 800px">
+																<img width="800" height="567" src="<?= $config ?>/img/<?= $row_product_new2['Image'] ?>" class="attachment-large size-large" alt="" loading="lazy" srcset="<?= $config ?>/img/<?= $row_product_new2['Image'] ?> " sizes="(max-width: 800px) 100vw, 800px">
 															</div>
+															<div class="box-text text-center">
+																<div class="box-text-inner">
 
+																	<h4><?= $row_product_new2['Name'] ?></h4>
+																</div>
+															</div>
 															<style>
 																#image_1652695089 {
 																	width: 100%;
@@ -1351,7 +1337,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 														</div>
 
 													</div>
-												</div>
+												</a>
 												<?php } ?>
 
 
