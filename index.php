@@ -1435,7 +1435,7 @@ $query_product_best_seller = mysqli_query($connect, $product_best_seller);
 											<div class="col-inner text-center">
 
 
-												<a data-animate="fadeInUp" class="button primary is-smaller reveal-icon expand">
+												<a href="<?= $config ?>/can-cau/" data-animate="fadeInUp" class="button primary is-smaller reveal-icon expand">
 													<span>Xem thêm sản phẩm</span>
 												</a>
 

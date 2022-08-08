@@ -16,7 +16,7 @@ if (isset($_GET["page_filter"])) {
 } else {
     $stt = 1;
 }
-$pageRow = 6;
+$pageRow = 8;
 $perRow = $stt * $pageRow - $pageRow;
 $totalPage = ceil(mysqli_num_rows(mysqli_query($connect, "SELECT * FROM danhsach_sp WHERE Name LIKE ('$textFix')")) / $pageRow);
 $listPrd = "";
