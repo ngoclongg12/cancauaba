@@ -1,8 +1,22 @@
 <?php
     ob_start();
+    include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/connectDB.php';
+
+    $sql_handling = "SELECT * FROM danhsach_donhang WHERE Status = 'handling'";
+    $query_sql_handling = mysqli_query($connect, $sql_handling);
+    $row_query_sql_handling = mysqli_fetch_all($query_sql_handling);
+
+    $sql_shipping = "SELECT * FROM danhsach_donhang WHERE Status = 'Shipping'";
+    $query_sql_shipping = mysqli_query($connect, $sql_shipping);
+    $row_query_sql_shipping = mysqli_fetch_all($query_sql_shipping);
+
+    $sql_done = "SELECT * FROM danhsach_donhang WHERE Status = 'Done'";
+    $query_sql_done = mysqli_query($connect, $sql_done);
+    $row_query_sql_done = mysqli_fetch_all($query_sql_done);
+
 ?>
 
-<h4 class="text-aligncenter mt-3">Thống kê số liệu</h4>
+<h4 class="text-aligncenter mt-3">Thống kê số liệu đơn hàng</h4>
 
 <!-- Main content -->
 <section class="content mt-4">
@@ -14,10 +28,9 @@
                     <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Cấu hình</span>
+                        <span class="info-box-text">Đơn đang xử lý</span>
                         <span class="info-box-number">
-                            10
-                            <small>%</small>
+                            <?= count($row_query_sql_handling) ?>
                         </span>
                     </div>
                     <!-- /.info-box-content -->
@@ -30,8 +43,8 @@
                     <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Lượt likes</span>
-                        <span class="info-box-number">41,410</span>
+                        <span class="info-box-text">Đơn đang giao</span>
+                        <span class="info-box-number"><?= count($row_query_sql_shipping) ?></span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
@@ -47,8 +60,8 @@
                     <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Đơn hàng</span>
-                        <span class="info-box-number">760</span>
+                        <span class="info-box-text">Đơn thành công</span>
+                        <span class="info-box-number"><?= count($row_query_sql_done) ?></span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>

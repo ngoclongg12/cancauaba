@@ -195,7 +195,7 @@
                 url: '../Admin_layout/Order/order_processList.php',
                 method: 'get',
             }).done(res => {
-                window.location.replace("<?= $config ?>admin/trangquantri.php?Admin=order_shipping");
+                window.location.replace("<?= $config ?>/admin/trangquantri.php?Admin=order_shipping");
             }).fail(err => {
                 console.log(err);
             });
@@ -211,7 +211,7 @@
                 url: '../Admin_layout/Order/order_processShip.php',
                 method: 'get',
             }).done(res => {
-                window.location.replace("<?= $config ?>admin/trangquantri.php?Admin=order_success");
+                window.location.replace("<?= $config ?>/admin/trangquantri.php?Admin=order_success");
             }).fail(err => {
                 console.log(err);
             });

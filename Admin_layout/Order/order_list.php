@@ -1,6 +1,6 @@
 <?php
 ob_start();
-$stt = "Đang xử lý";
+$stt = "handling";
 $sql = "SELECT * FROM danhsach_donhang WHERE Status = '$stt' ORDER BY id_dh DESC";
 $query = mysqli_query($connect, $sql);
 
