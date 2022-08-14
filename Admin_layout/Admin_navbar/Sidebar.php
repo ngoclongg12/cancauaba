@@ -1,3 +1,8 @@
+<?php
+$sql_handling = "SELECT * FROM danhsach_donhang WHERE Status = 'handling'";
+$query_sql_handling = mysqli_query($connect, $sql_handling);
+$row_query_sql_handling = mysqli_fetch_all($query_sql_handling);
+?>
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-light-primary elevation-4">
     <!-- Brand Logo -->
@@ -74,7 +79,7 @@
                         <p>
                             Đơn hàng
                             <i class="fas fa-angle-left right"></i>
-                            <span class="badge badge-danger right">6</span>
+                            <span class="badge badge-danger right"><?= count($row_query_sql_handling) ?></span>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">

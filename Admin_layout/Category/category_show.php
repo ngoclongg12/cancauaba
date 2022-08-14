@@ -44,7 +44,7 @@ for ($i = 1; $i <= $totalPage; $i++) {
         <span aria-hidden="true"><i class="fas fa-angle-left"></i></span>
         </a>
         </li>';
-        $listPage .= '<li class="page-item active"><a class="page-link" href="http://localhost/cancauaba/admin/trangQuanTri.php?Admin=category_show&page_category=' . $i . '">' . $i . '</a></li>';
+        $listPage .= '<li class="page-item active"><a class="page-link" href="'. $configAdmin .'/admin/trangQuanTri.php?Admin=category_show&page_category=' . $i . '">' . $i . '</a></li>';
         $nextPage = '
         <li class="page-item">
         <a class="page-link" 
@@ -54,7 +54,7 @@ for ($i = 1; $i <= $totalPage; $i++) {
         </a>
         </li>';
     } else {
-        $listPage .= '<li class="page-item"><a class="page-link" href="http://localhost/cancauaba/admin/trangQuanTri.php?Admin=category_show&page_category=' . $i . '">' . $i . '</a></li>';
+        $listPage .= '<li class="page-item"><a class="page-link" href="'. $configAdmin .'/admin/trangQuanTri.php?Admin=category_show&page_category=' . $i . '">' . $i . '</a></li>';
         
     }
 }
@@ -82,7 +82,7 @@ for ($i = 1; $i <= $totalPage; $i++) {
                 <td><?= $row['0'] ?></td>
                 <td><?= $row['1'] ?></td>
                 <td>
-                    <a class="btn btn-primary btn-sm" href="<?= $configAdmin ?>/public/TrangQuanTri.php?Admin=category_fix&id=<?= $row["0"] ?>">
+                    <a class="btn btn-primary btn-sm" href="<?= $configAdmin ?>/admin/TrangQuanTri.php?Admin=category_fix&id=<?= $row["0"] ?>">
                         <i class="fas fa-edit"></i>
                     </a>
                     <a onclick="return product_del()" class="btn btn-danger btn-sm" href="<?= $configAdmin ?>/Admin_layout/Category/category_del.php?id=<?= $row["0"] ?>">

@@ -149,7 +149,7 @@ if (isset($_GET['Admin'])) {
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="../index.php">Ozada</a></li>
+                                <li class="breadcrumb-item"><a href="../index.php">Cancauaba</a></li>
                                 <li class="breadcrumb-item active">Trang quản trị</li>
                             </ol>
                         </div><!-- /.col -->
@@ -175,7 +175,7 @@ if (isset($_GET['Admin'])) {
         <!-- Main Footer -->
         <footer class="main-footer">
             <strong>Copyright &copy; 2021 </strong>
-            Bản quyền thuộc về <b><a href="../index.php">Ozada</a>.</b>
+            Bản quyền thuộc về <b><a href="../index.php">Cancauaba</a>.</b>
             <div class="float-right d-none d-sm-inline-block">
                 <b>Version</b> 3.1.0
             </div>

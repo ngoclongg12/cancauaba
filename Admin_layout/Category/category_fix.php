@@ -1,7 +1,7 @@
 <?php
 ob_start();
 
-$id_dm = $_GET['id_dm'];
+$id_dm = $_GET['id'];
 $getInf = "SELECT * FROM danhsach_dm WHERE ID='$id_dm'";
 $row = mysqli_fetch_array(mysqli_query($connect, $getInf));
 
@@ -34,7 +34,7 @@ if (isset($_POST["submit"])) {
     <div class="card-body">
         <div class="form-group">
             <label>Tên danh mục</label>
-            <input type="text" name="name" class="form-control" id="exampleInputEmail1" value="<?= $row["Name"] ?>" required>
+            <input type="text" name="name" class="form-control" id="exampleInputEmail1" value="<?= $row["name"] ?>" required>
         </div>
         <div class="form-group mb-0">
             <div class="custom-control custom-checkbox">

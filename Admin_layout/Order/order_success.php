@@ -25,7 +25,7 @@ $query = mysqli_query($connect, $sql);
         <tbody>
             <tr>
                 <td>
-                    <a href="./trangquantri.php?Admin=order_detail&id_dh=<?= $row['id_dh'] ?>">Ozadavn00<?= $row['id_dh'] ?></a>
+                    <a href="./trangquantri.php?Admin=order_detail&id_dh=<?= $row['id_dh'] ?>">Cancauaba00<?= $row['id_dh'] ?></a>
                 </td>
                 <td><?= $row['created_at'] ?></td>
                 <td><?= $row['Name'] ?></td>

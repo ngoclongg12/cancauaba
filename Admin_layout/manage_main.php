@@ -13,6 +13,10 @@
     $sql_done = "SELECT * FROM danhsach_donhang WHERE Status = 'Done'";
     $query_sql_done = mysqli_query($connect, $sql_done);
     $row_query_sql_done = mysqli_fetch_all($query_sql_done);
+    
+    $sql_kh = "SELECT * FROM danhsach_kh";
+    $query_sql_kh = mysqli_query($connect, $sql_kh);
+    $row_query_sql_kh = mysqli_fetch_all($query_sql_kh);
 
 ?>
 
@@ -74,7 +78,7 @@
 
                     <div class="info-box-content">
                         <span class="info-box-text">Thành viên</span>
-                        <span class="info-box-number">2,000</span>
+                        <span class="info-box-number"><?= count($row_query_sql_kh) ?></span>
                     </div>
                     <!-- /.info-box-content -->
                 </div>
