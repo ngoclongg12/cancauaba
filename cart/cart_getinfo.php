@@ -2,6 +2,11 @@
 session_start();
 include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/connectDB.php';
 
+if (!isset($_SESSION['giohang'])) {
+    $configCheckSession = include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/config/config.php';
+    header('location: '.$configCheckSession.'/cart/cart.php');
+}
+
 if (isset($_GET['Name']) && isset($_GET['Address']) && isset($_GET['Phone'])) {
 
     $tenKH = $_GET['Name'];

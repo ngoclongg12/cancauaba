@@ -1,4 +1,5 @@
 <?php
+
 $total = 0;
 $totalAll = 0;
 $hoTen = null;
@@ -142,18 +143,22 @@ if(isset($_SESSION['hoTen'])){
                     <select class="form-control" name="typeBill" id="typeBill">
                         <option value="0" disabled selected hidden>Vui lòng chọn !</option>
                         <option value="1">Tiền mặt</option>
-                        <option value="2">Visa/Master-Card</option>
-                        <option value="3">Ví điện tử</option>
                         <option value="4">Internet Banking</option>
                     </select>
                 </div>
                 <p class="alert alert-danger errTypeBill" style="display: none;"></p>
             </div>
+            <?php
+                if (isset($_SESSION['giohang']) && count($_SESSION['giohang']) > 0) {
+            ?>
             <div class="col-md-4">
                 <button type="button" name="infoSubmit" class="btn btn-info btn-sub-modal js_checkout">
                     Thanh toán
                 </button>
             </div>
+            <?php
+                }
+            ?>
         </div>
     </form>
     <!-- Button trigger modal -->

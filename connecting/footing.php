@@ -94,18 +94,27 @@
         $('#exampleModal').on('shown.bs.modal', function() {
             $('#myInput').trigger('focus');
         });
+        let nameBill = $('#nameBill').val();
+        $('#modalName').html(nameBill);
         $('#nameBill').change(function() {
-            let nameBill = $('#nameBill').val();
+            nameBill = $('#nameBill').val();
             $('#modalName').html(nameBill);
         })
+        
+        let phoneBill = $('#phoneBill').val();
+        $('#modalPhone').html(phoneBill);
         $('#phoneBill').change(function() {
-            let phoneBill = $('#phoneBill').val();
+            phoneBill = $('#phoneBill').val();
             $('#modalPhone').html(phoneBill);
         })
+
+        let addressBill = $('#addressBill').val();
+        $('#modalAddress').html(addressBill);
         $('#addressBill').change(function() {
-            let addressBill = $('#addressBill').val();
+            addressBill = $('#addressBill').val();
             $('#modalAddress').html(addressBill);
         })
+        
         $('#typeBill').change(function() {
             let typeBill = $('#typeBill :selected').text();
             $('#modalPay').html(typeBill);
