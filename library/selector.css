@@ -6,6 +6,21 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+.light-mode .os-padding {
+  max-height: 70vh;
+  overflow-y: scroll;
+}
+
+.light-mode .os-padding::-webkit-scrollbar {
+  width: 5px;
+  background: #f1f1f1;
+}
+
+.light-mode .os-padding::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 5px;
+}
+
 .home a {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -457,12 +472,12 @@ a:hover {
 
 .boxSlidePrd > div::-webkit-scrollbar {
   width: 3px;
-  background: #f1f1f1;
+  background: black;
 }
 
 .boxSlidePrd > div::-webkit-scrollbar-thumb {
-  background: rgb(170, 224, 248);
   border-radius: 5px;
+  background: black;
 }
 
 /* footer */
