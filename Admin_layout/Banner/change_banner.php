@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
 
         $sql_set = "INSERT INTO danhsach_banner(file_upload, created_at) VALUES('$img', '$time')";
         mysqli_query($connect, $sql_set);
-        header('location: ../admin/trangquantri.php?Admin=banner_show');
+        header('location: ../admin/trangquantri.php?Admin=banner');
         } else {
             $alert = '<center class="alert alert-danger mt-3">Mời nhập ảnh vào !</center>';
         }
@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
         <div class="col-md-2"></div>
         <div class="slideBanner col-md-7">
             <?php
-            $sql_get = "SELECT * FROM danhsach_banner ORDER BY created_at DESC LIMIT 2";
+            $sql_get = "SELECT * FROM danhsach_banner ORDER BY id_banner DESC LIMIT 2";
             $query_get = mysqli_query($connect, $sql_get);
             while ($row = mysqli_fetch_array($query_get)) {
             ?>

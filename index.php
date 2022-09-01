@@ -897,16 +897,7 @@ $query_product_best_seller = mysqli_query($connect, $product_best_seller);
 																		while ($row_danhmuc_con = mysqli_fetch_array($query_danhmuc_con)) {
 																	?>
 																	<div class="col-md-4">
-																		<div class="col-md-12"><?= $row_danhmuc_con['name'] ?></div>
-																		<div class="col-md-12">
-																			<a href="abc.zxc">Test <?= $row_danhmuc['name'] ?></a>
-																		</div>
-																		<div class="col-md-12">
-																			<a href="zxc.asdasd">Test <?= $row_danhmuc['name'] ?></a>
-																		</div>
-																		<div class="col-md-12">
-																			<a href="zxc.asdasd">Test <?= $row_danhmuc['name'] ?></a>
-																		</div>
+																		<a href="abc.zxc" class="col-md-12"><?= $row_danhmuc_con['name'] ?></a>
 																	</div>
 																	<?php } ?>
 																</div>

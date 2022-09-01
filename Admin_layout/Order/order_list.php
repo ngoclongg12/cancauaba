@@ -33,7 +33,15 @@ $query = mysqli_query($connect, $sql);
                 <td>
                     <select class="custom-select custom-select-sm cha_ship" name="">
                         <option disabled selected hidden>Đang xử lý</option>
-                        <option value="<?= $row['id_dh'] ?>">Shipping</option>
+                        <option
+                            style="
+                                color:black;
+                                background: yellow;
+                                font-weight: 700;"
+                            value="<?= $row['id_dh'] ?>"
+                            >
+                            Shipping
+                        </option>
                     </select>
                 </td>
                 <td><?= number_format($row['Bill']) ?>đ</td>

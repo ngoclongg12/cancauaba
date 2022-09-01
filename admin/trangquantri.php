@@ -25,17 +25,9 @@ if (isset($_GET['Admin'])) {
         case "banner":
             include_once '../Admin_layout/Banner/change_banner.php';
             break;
-
-        case "banner_show":
-            include_once '../Admin_layout/Banner/Banner_show.php';
-            break;
         
         case "under_banner":
             include_once '../Admin_layout/Banner/UnderBanner.php';
-            break;
-
-        case "best-selling":
-            include_once '../Admin_layout/Block/BestSellingProduct.php';
             break;
 
         case "order":

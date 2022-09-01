@@ -175,13 +175,7 @@ $row_query_sql_handling = mysqli_fetch_all($query_sql_handling);
                         <li class="nav-item">
                             <a href="../admin/trangquantri.php?Admin=banner" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Thêm Banner mới</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="../admin/trangquantri.php?Admin=banner_show" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Demo banner</p>
+                                <p>Banner</p>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -193,32 +187,7 @@ $row_query_sql_handling = mysqli_fetch_all($query_sql_handling);
 
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
 
-                        <i class="nav-icon fas fa-clipboard"></i>
-                        <p>
-                            Block
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="../admin/trangquantri.php?Admin=best-selling" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Sản phẩm bán chạy nhất</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="../admin/trangquantri.php?Admin=banner_show" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Demo banner</p>
-                            </a>
-                        </li>
-
-
-                    </ul>
-                </li>
 
 
 

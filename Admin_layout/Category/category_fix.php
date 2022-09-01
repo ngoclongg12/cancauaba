@@ -4,6 +4,9 @@ ob_start();
 $id_dm = $_GET['id'];
 $getInf = "SELECT * FROM danhsach_dm WHERE ID='$id_dm'";
 $row = mysqli_fetch_array(mysqli_query($connect, $getInf));
+$getDmCon = "SELECT * FROM danhsach_dm_con WHERE id_dm='$id_dm'";
+$querryDmCon = mysqli_query($connect, $getDmCon);
+// $rowGetDmCon = mysqli_fetch_array(mysqli_query($connect, $getDmCon));
 
 
 if (isset($_POST["submit"])) {
@@ -35,6 +38,11 @@ if (isset($_POST["submit"])) {
         <div class="form-group">
             <label>Tên danh mục</label>
             <input type="text" name="name" class="form-control" id="exampleInputEmail1" value="<?= $row["name"] ?>" required>
+            <?php while($rowGetDmCon = mysqli_fetch_array($querryDmCon)) {?>
+                <div>
+                    <?= $rowGetDmCon['name'] ?>
+                </div>
+            <?php } ?>
         </div>
         <div class="form-group mb-0">
             <div class="custom-control custom-checkbox">
@@ -43,7 +51,7 @@ if (isset($_POST["submit"])) {
             </div>
         </div>
     </div>
-
+    
     <!-- /.card-body -->
     <div class="card-footer">
         <button type="submit" name="submit" class="btn btn-primary">Cập nhật</button>
