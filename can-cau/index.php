@@ -71,10 +71,10 @@ $query = mysqli_query($connect, $sql);
         <div class="d-table-cell">
             <div class="container">
                 <div class="title-content">
-                    <h2>Search Product</h2>
+                    <h2>Trang sản phẩm</h2>
                     <ul>
                         <li>
-                            <a href="index.html">Home</a>
+                            <a href="index.html">Trang chủ</a>
                         </li>
                         <li>
                             <span>Cần câu</span>
@@ -94,6 +94,16 @@ $query = mysqli_query($connect, $sql);
 
 <div class="container-fluid" style="background-color: white">
 
+    <form action="<?= $config ?>/search.php" method="get" class="mt-5" style="max-width: 460px; margin: auto" >
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="s" placeholder="Nhập từ khoá...">
+            <div class="input-group-append">
+                <span>
+                    <button class="btn" style="background-color: #446084; color:#ffffff; border-color:#ffffff" type="submit">Tìm kiếm</button>
+                </span>
+            </div>
+        </div>
+    </form>
     <div class="container">
     <div class="row pt-4">
         <?php

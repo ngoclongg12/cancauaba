@@ -53,9 +53,9 @@ if (isset($_POST["submit"])) {
         <div class="form-group">
             <label>Top sản phẩm :</label>
             <select name="top" id="">
-                <option value="0" class="active">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
+                <option value="0" class="active">Sản phẩm thường</option>
+                <option value="1">Sản phẩm bán chạy</option>
+                <option value="2">Sản phẩm mới</option>
             </select>
             
         </div>

@@ -116,7 +116,7 @@ $query = mysqli_query($connect, $sql);
         <input type="text" class="form-control" name="s" placeholder="Nhập từ khoá...">
         <div class="input-group-append">
             <span>
-                <button class="btn btn-secondary" style="border: none;" type="submit">Tìm kiếm</button>
+                <button class="btn" style="background-color: #446084; color:#ffffff; border-color:#ffffff" type="submit">Tìm kiếm</button>
             </span>
         </div>
     </div>
@@ -125,7 +125,7 @@ $query = mysqli_query($connect, $sql);
 <div class="container-fluid" style="background-color: white">
     <div class="mt-4" style="background-color: #446084;">
         <div class="container">
-            <h4 style="line-height: 45px; margin: 0; color: white">Từ khoá tìm kiếm: <?= $text ?>,</h4>
+            <h4 style="line-height: 45px; margin: 0; color: white">Kết quả tìm kiếm cho: <?= $text ?>,</h4>
         </div>
     </div>
     <div class="container">
