@@ -105,6 +105,7 @@ $query = mysqli_query($connect, $sql);
         </div>
     </form>
     <div class="container">
+    <h1>Các sản phẩm</h1>
     <div class="row pt-4">
         <?php
         if (mysqli_num_rows($query) == 0) {
@@ -114,7 +115,7 @@ $query = mysqli_query($connect, $sql);
         <?php
         while ($row = mysqli_fetch_array($query)) {
         ?>
-            <a href="./layout/product-page.php?id_sp=<?= $row['ID'] ?>" class="col-md-3 p-3">
+            <a href="<?= $config ?>/layout/product-page.php?id_sp=<?= $row['ID'] ?>" class="col-md-3 p-3">
                 <div class="col-inner">
                     <div class="box has-hover   has-hover box-shadow-1 box-text-bottom">
                         <div class="box-image">
@@ -131,7 +132,7 @@ $query = mysqli_query($connect, $sql);
                                 <h4><?= $row['Name'] ?></h4>
                                 <p><?= number_format($row['Price']) ?> đ</p>
                             </div>
-                            <form action="./cart/cart_process.php">
+                            <form action="<?= $config ?>/cart/cart_process.php">
                                 <input name="id_sp" value="<?= $row['ID'] ?>" type="hidden">
                                 <input name="t" value="add" type="hidden">
                                 <button class="button primary">Add to cart</button>

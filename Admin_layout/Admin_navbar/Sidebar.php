@@ -2,6 +2,11 @@
 $sql_handling = "SELECT * FROM danhsach_donhang WHERE Status = 'handling'";
 $query_sql_handling = mysqli_query($connect, $sql_handling);
 $row_query_sql_handling = mysqli_fetch_all($query_sql_handling);
+$color = 'black';
+if (count($row_query_sql_handling)) {
+    $color = 'red; font-weight: 700';
+}
+
 ?>
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-light-primary elevation-4">
@@ -87,7 +92,7 @@ $row_query_sql_handling = mysqli_fetch_all($query_sql_handling);
                         <li class="nav-item">
                             <a href="../admin/trangquantri.php?Admin=order" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Đơn hàng đang xử lý</p>
+                                <p style="color:<?= $color ?>">Đơn hàng đang xử lý</p>
                             </a>
                         </li>
                         <li class="nav-item">
