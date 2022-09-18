@@ -41,6 +41,10 @@ if (isset($_GET['Admin'])) {
         case "order_success":
             include_once '../Admin_layout/Order/order_success.php';
             break;
+        
+        case "order_all":
+            include_once '../Admin_layout/Order/order_all.php';
+            break;
 
         case "order_detail":
             include_once '../Admin_layout/Order/order_detail.php';

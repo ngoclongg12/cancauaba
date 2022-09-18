@@ -107,6 +107,12 @@ if (count($row_query_sql_handling)) {
                                 <p>Đơn hàng thành công</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="../admin/trangquantri.php?Admin=order_all" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Xem tất cả đơn hàng</p>
+                            </a>
+                        </li>
 
                     </ul>
                 </li>
