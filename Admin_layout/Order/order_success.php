@@ -58,9 +58,8 @@ if ($hasSearch) {
 $query = mysqli_query($connect, $sql);
 
 if (mysqli_num_rows($query) == 0) {
-    echo '<center class="alert alert-danger mt-3">Không có đơn hàng này !</center>';
+    echo '<center class="alert alert-danger mt-3">Không có đơn hàng nào !</center>';
 }
-var_dump(mysqli_num_rows($query) > $pageRow);
 ?>
 
 <!-- search -->
