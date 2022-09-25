@@ -9,18 +9,18 @@ if (isset($_POST["submit"])) {
     $status = $_POST["status"];
     $price = $_POST["price"];
     $top = $_POST["top"];
+    $type = $_POST["type"];
     $alert = "";
 
     if (isset($_POST["accept"])) {
 
         if (isset($name) && isset($status) && isset($price) && isset($_FILES["img_upload"])) {
             $img = $_FILES['img_upload']['name'];
-            // echo $img;
             $img_tmp = $_FILES['img_upload']['tmp_name'];
-            // echo $img_tmp;
             move_uploaded_file($img_tmp, '../img/' . $img);
-            // echo $s;
-            $sql = "INSERT INTO danhsach_sp (Name, Status, Price, Image, Top) VALUES ('$name', '$status', '$price', '$img', '$top')";
+            
+            $sql = "INSERT INTO danhsach_sp (Name, Status, Price, Image, Top, type)
+            VALUES ('$name', '$status', '$price', '$img', '$top', '$type')";
             $query = mysqli_query($connect, $sql);
             $alert = '<center class="alert alert-success mt-3 add-sp">Thêm sản phẩm thành công !</center>';
         } else {
@@ -49,6 +49,18 @@ if (isset($_POST["submit"])) {
         <div class="form-group">
             <label>Giá thành sản phẩm</label>
             <input type="text" name="price" class="form-control" placeholder="Nhập giá thành sản phẩm" required>
+        </div>
+        <div class="form-group">
+            <label>Loại sản phẩm :</label>
+            <select name="type">
+                <option value="cancau" class="active">Cần câu</option>
+                <option value="daycau">Dây câu</option>
+                <option value="phaocau">Phao câu</option>
+                <option value="luoicau">Lưỡi câu</option>
+                <option value="moicau">Mồi câu</option>
+                <option value="thungcau">Thùng câu</option>
+                <option value="thoitrangcau">Thời trang câu</option>
+            </select>
         </div>
         <div class="form-group">
             <label>Top sản phẩm :</label>

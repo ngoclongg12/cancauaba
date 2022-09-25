@@ -50,7 +50,7 @@ if (isset($_POST['submit'])) {
         $query_get = mysqli_query($connect, $sql_get);
         while ($row = mysqli_fetch_array($query_get)) {
         ?>
-            <div class="slideBanner col-md-4">
+            <div class="col-md-4">
                 <div>
                     <img  width="350" height="230" src="../img/<?= $row['file_upload'] ?>" alt="banner">
                 </div>

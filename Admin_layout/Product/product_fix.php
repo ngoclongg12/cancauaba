@@ -56,13 +56,24 @@ if (isset($_POST["submit"])) {
             <input type="text" name="price" class="form-control" id="exampleInputPassword1" value="<?= $row["Price"] ?>" ` required>
         </div>
         <div class="form-group">
-            <label>Top sản phẩm :</label>
+            <label>Loại sản phẩm : <?= $row["type"] ?></label>
+            <select name="type" class="custom-select">
+                <option value="cancau" class="active">Cần câu</option>
+                <option value="daycau">Dây câu</option>
+                <option value="phaocau">Phao câu</option>
+                <option value="luoicau">Lưỡi câu</option>
+                <option value="moicau">Mồi câu</option>
+                <option value="thungcau">Thùng câu</option>
+                <option value="thoitrangcau">Thời trang câu</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Top sản phẩm : <?= $row["Top"] ?></label>
             <select name="top" class="custom-select" id="">
                 <option value="0" class="active">Sản phẩm thường</option>
                 <option value="1">Sản phẩm bán chạy</option>
                 <option value="2">Sản phẩm mới</option>
             </select>
-
         </div>
         <div class="form-group mb-4">
             <label>Ảnh mô tả: </label>
