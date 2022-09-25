@@ -697,7 +697,7 @@ $query_product_new2 = mysqli_query($connect, $product_new2);
 						<div class="flex-col hide-for-medium flex-left flex-grow">
 							<ul class="header-nav header-nav-main nav nav-left  nav-size-medium nav-uppercase">
 								<li id="menu-item-20" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-20 active"><a href="<?= $config ?>" aria-current="page" class="nav-top-link">Trang chủ</a></li>
-								<li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="<?= $config ?>/can-cau/" class="nav-top-link">Cần câu</a></li>
+								<li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="<?= $config ?>/can-cau/" class="nav-top-link">Sản phẩm</a></li>
 								<li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="<?= $config ?>/kinh-nghiem/" class="nav-top-link">Kinh nghiệm</a></li>
 								<li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="<?= $config ?>/lien-he/" class="nav-top-link">Liên hệ</a></li>
 								<li id="menu-item-162" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162"><a href="<?= $config ?>/gioi-thieu/" class="nav-top-link">Giới thiệu</a></li>
