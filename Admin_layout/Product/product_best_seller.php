@@ -1,6 +1,6 @@
 <?php
 ob_start();
-
+$configHref = include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/config/config.php';
 
 if (isset($_GET['page_product'])) {
     $page_prd = $_GET['page_product'];
@@ -33,7 +33,7 @@ for ($i = 1; $i <= $totalPage; $i++) {
     $prevPage = '
             <li class="page-item">
             <a class="page-link" 
-            href="../admin/trangquantri.php?Admin=product_best_seller&page_product=' . $x . '" 
+            href="'.$configHref.'/admin/trangquantri.php?Admin=product_best_seller&page_product=' . $x . '" 
             aria-label="Previous">
             <span aria-hidden="true"><i class="fas fa-angle-left"></i></span>
             </a>
@@ -42,7 +42,7 @@ for ($i = 1; $i <= $totalPage; $i++) {
     $nextPage = '
             <li class="page-item">
             <a class="page-link" 
-            href="../admin/trangquantri.php?Admin=product_best_seller&page_product=' . $y . '" 
+            href="'.$configHref.'/admin/trangquantri.php?Admin=product_best_seller&page_product=' . $y . '" 
             aria-label="Next">
             <span aria-hidden="true"><i class="fas fa-angle-right"></i></span>
             </a>
@@ -50,10 +50,10 @@ for ($i = 1; $i <= $totalPage; $i++) {
 
     if ($page_prd == $i) {
 
-        $listPage .= '<li class="page-item active"><a class="page-link" href="../admin/trangquantri.php?Admin=product_best_seller&page_product=' . $i . '">' . $i . '</a></li>';
+        $listPage .= '<li class="page-item active"><a class="page-link" href="'.$configHref.'/admin/trangquantri.php?Admin=product_best_seller&page_product=' . $i . '">' . $i . '</a></li>';
     } else {
 
-        $listPage .= '<li class="page-item"><a class="page-link" href="../admin/trangquantri.php?Admin=product_best_seller&page_product=' . $i . '">' . $i . '</a></li>';
+        $listPage .= '<li class="page-item"><a class="page-link" href="'.$configHref.'/admin/trangquantri.php?Admin=product_best_seller&page_product=' . $i . '">' . $i . '</a></li>';
     }
 }
 
@@ -96,9 +96,9 @@ for ($i = 1; $i <= $totalPage; $i++) {
                         }
                     ?>
                 </td>
-                <td><img class="admin_img_mota" src="../img/<?= $row['Image'] ?>" alt="product"></td>
+                <td><img class="admin_img_mota" src="<?= $configHref ?>/img/<?= $row['Image'] ?>" alt="product"></td>
                 <td>
-                    <a class="btn btn-primary btn-sm" href="../admin/trangquantri.php?Admin=product_fix&id_sp=<?= $row["ID"] ?>">
+                    <a class="btn btn-primary btn-sm" href="<?= $configHref ?>/admin/trangquantri.php?Admin=product_fix&id_sp=<?= $row["ID"] ?>">
                         <i class="fas fa-edit"></i>
                     </a>
                     <a onclick="return product_del()" class="btn btn-danger btn-sm" href="<?= $config['hostname'] ?>Admin_layout/Product/product_del.php?id_sp=<?= $row["ID"] ?>">

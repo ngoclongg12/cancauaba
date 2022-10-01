@@ -11,8 +11,8 @@ if (count($row_query_sql_handling)) {
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-light-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="../index.php">
-        <img src="../img/logo.jpg" class="logoAdmin" alt="logo">
+    <a href="<?= $configAdmin ?>/index.php">
+        <img src="<?= $configAdmin ?>/img/logo.jpg" class="logoAdmin" alt="logo">
     </a>
 
     <!-- Sidebar -->
@@ -22,13 +22,13 @@ if (count($row_query_sql_handling)) {
         <div class="user-panel pb-3 mb-3 d-flex">
             <div class="image">
                 <!-- <h5>Trang Quản trị</h5> -->
-                <img src="../library/dist/img/user1-128x128.jpg" class="img-circle elevation-2" alt="User Image">
+                <img src="<?= $configAdmin ?>/library/dist/img/user1-128x128.jpg" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
                 <a href="#" class="d-block set_admin"><?= $_SESSION["hoTen"] . " ⌵ " ?></a>
                 <div class="option-logout-toggle-admin">
-                    <div><a href="../login/Dangxuat.php">Đăng xuất</a></div>
-                    <div><a href="../login/Doimatkhau.php">Đổi mật khẩu</a></div>
+                    <div><a href="<?= $configAdmin ?>/login/Dangxuat.php">Đăng xuất</a></div>
+                    <div><a href="<?= $configAdmin ?>/login/Doimatkhau.php">Đổi mật khẩu</a></div>
                 </div>
             </div>
         </div>
@@ -60,7 +60,7 @@ if (count($row_query_sql_handling)) {
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="../admin/trangquantri.php?Admin=manage_main" class="nav-link">
+                            <a href="<?= $configAdmin ?>/admin/trangquantri.php?Admin=manage_main" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Trang vận hành</p>
                             </a>
@@ -69,7 +69,7 @@ if (count($row_query_sql_handling)) {
                     </ul>
                 </li>
                 <!-- <li class="nav-item">
-                    <a href="../admin/trangquantri.php?Admin=order" class="nav-link">
+                    <a href="<?= $configAdmin ?>/admin/trangquantri.php?Admin=order" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <i class="nav-icon fas fa-shopping-bag"></i>
                         <p>
@@ -90,25 +90,25 @@ if (count($row_query_sql_handling)) {
                     <ul class="nav nav-treeview">
 
                         <li class="nav-item">
-                            <a href="../admin/trangquantri.php?Admin=order" class="nav-link">
+                            <a href="<?= $configAdmin ?>/admin/trangquantri.php?Admin=order" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p style="color:<?= $color ?>">Đơn hàng đang xử lý</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="../admin/trangquantri.php?Admin=order_shipping" class="nav-link">
+                            <a href="<?= $configAdmin ?>/admin/trangquantri.php?Admin=order_shipping" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Đơn hàng đang Ship</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="../admin/trangquantri.php?Admin=order_success" class="nav-link">
+                            <a href="<?= $configAdmin ?>/admin/trangquantri.php?Admin=order_success" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Đơn hàng thành công</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="../admin/trangquantri.php?Admin=order_all" class="nav-link">
+                            <a href="<?= $configAdmin ?>/admin/trangquantri.php?Admin=order_all" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Xem tất cả đơn hàng</p>
                             </a>
@@ -129,25 +129,25 @@ if (count($row_query_sql_handling)) {
                     <ul class="nav nav-treeview">
 
                         <li class="nav-item">
-                            <a href="../admin/trangquantri.php?Admin=product_show" class="nav-link">
+                            <a href="<?= $configAdmin ?>/admin/trangquantri.php?Admin=product_show" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Danh sách sản phẩm</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="../admin/trangquantri.php?Admin=product_best_seller" class="nav-link">
+                            <a href="<?= $configAdmin ?>/admin/trangquantri.php?Admin=product_best_seller" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Sản phẩm bán chạy</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="../admin/trangquantri.php?Admin=product_new" class="nav-link">
+                            <a href="<?= $configAdmin ?>/admin/trangquantri.php?Admin=product_new" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Sản phẩm mới</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="../admin/trangquantri.php?Admin=product_add" class="nav-link">
+                            <a href="<?= $configAdmin ?>/admin/trangquantri.php?Admin=product_add" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Thêm sản phẩm</p>
                             </a>
@@ -166,7 +166,7 @@ if (count($row_query_sql_handling)) {
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="../admin/trangquantri.php?Admin=category_show" class="nav-link" onclick="QuangCao()">
+                            <a href="<?= $configAdmin ?>/admin/trangquantri.php?Admin=category_show" class="nav-link" onclick="QuangCao()">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Danh sách danh mục</p>
                             </a>
@@ -184,13 +184,13 @@ if (count($row_query_sql_handling)) {
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="../admin/trangquantri.php?Admin=banner" class="nav-link">
+                            <a href="<?= $configAdmin ?>/admin/trangquantri.php?Admin=banner" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Banner</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="../admin/trangquantri.php?Admin=under_banner" class="nav-link">
+                            <a href="<?= $configAdmin ?>/admin/trangquantri.php?Admin=under_banner" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Lưới quảng cáo</p>
                             </a>

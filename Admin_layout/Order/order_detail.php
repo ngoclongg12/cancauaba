@@ -84,7 +84,7 @@ if (isset($_GET['id_dh'])) {
         ?>
             <tr>
                 <td scope="row">
-                    <img class="admin_img_mota" src="../img/<?= $row_get_sp['Image'] ?>" alt="product">
+                    <img class="admin_img_mota" src="<?= $configHref ?>/img/<?= $row_get_sp['Image'] ?>" alt="product">
                     <div class="namePrd"><?= $row_get_sp['Name'] ?></div>
                 </td>
                 <td><?= number_format($row_get_sp['Price']) ?>đ</td>

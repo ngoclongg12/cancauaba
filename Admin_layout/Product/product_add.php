@@ -1,8 +1,7 @@
 <?php
 ob_start();
-?>
+$configHref = include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/config/config.php';
 
-<?php
 if (isset($_POST["submit"])) {
 
     $name = $_POST["name"];
@@ -17,7 +16,7 @@ if (isset($_POST["submit"])) {
         if (isset($name) && isset($status) && isset($price) && isset($_FILES["img_upload"])) {
             $img = $_FILES['img_upload']['name'];
             $img_tmp = $_FILES['img_upload']['tmp_name'];
-            move_uploaded_file($img_tmp, '../img/' . $img);
+            move_uploaded_file($img_tmp, $configHref. '/img/' . $img);
             
             $sql = "INSERT INTO danhsach_sp (Name, Status, Price, Image, Top, type)
             VALUES ('$name', '$status', '$price', '$img', '$top', '$type')";

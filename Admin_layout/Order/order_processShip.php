@@ -7,5 +7,4 @@ if(isset($_GET['done_id_dh'])){
     $id_dh = $_GET['done_id_dh'];
     $sql = "UPDATE danhsach_donhang SET Status = 'Done', updated_at = '$time' WHERE id_dh = '$id_dh'";
     $query = mysqli_query($connect, $sql);
-    // echo $id_dh;
 }

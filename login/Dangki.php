@@ -1,5 +1,7 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/connectDB.php';
+$config = include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/config/config.php';
+
 if (isset($_POST["submit"])) {
     $alert = "";
 

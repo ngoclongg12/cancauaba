@@ -1,5 +1,6 @@
 <?php
 ob_start();
+$configHref = include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/config/config.php';
 
 $id_sp = $_GET['id_sp'];
 $getInf = "SELECT * FROM danhsach_sp WHERE ID='$id_sp'";
@@ -22,12 +23,12 @@ if (isset($_POST["submit"])) {
                 $sql = "UPDATE danhsach_sp SET Name = '$name', Status = '$status', Price = '$price', Top = '$top' WHERE ID = '$id_sp'";
             }
             else{
-                move_uploaded_file($imgPath, '../img/' . $imgName);
+                move_uploaded_file($imgPath, $configHref. '/img/' . $imgName);
                 $sql = "UPDATE danhsach_sp SET Name = '$name', Status = '$status', Price = '$price', Image = '$imgName', Top = '$top' WHERE ID = '$id_sp'";
             }
             $query = mysqli_query($connect, $sql);
             // $alert = '<center class="alert alert-success mt-3 add-sp">Cập nhật thành công !</center>';
-            header("location: ../admin/trangquantri.php?Admin=product_show");
+            header("location: '.$configHref.'/admin/trangquantri.php?Admin=product_show");
         } else {
             $alert = '<center class="alert alert-danger mt-3">Mời điền đủ thông tin sản phẩm !</center>';
         }
@@ -77,7 +78,7 @@ if (isset($_POST["submit"])) {
         </div>
         <div class="form-group mb-4">
             <label>Ảnh mô tả: </label>
-            <input type="file" class="dropify" name="img_up" data-default-file="../img/<?= $row['Image'] ?>"/>
+            <input type="file" class="dropify" name="img_up" data-default-file="<?= $configHref ?>/img/<?= $row['Image'] ?>"/>
         </div>
         <div class="form-group mb-0">
             <div class="custom-control custom-checkbox">

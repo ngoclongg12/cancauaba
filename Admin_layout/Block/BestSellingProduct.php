@@ -6,14 +6,14 @@ if (isset($_POST['submit'])) {
         $img = $_FILES['banner_upload']['name'];
         $tmp = $_FILES['banner_upload']['tmp_name'];
         if(!empty($img)) {
-            move_uploaded_file($tmp, '../img/' . $img);
+            move_uploaded_file($tmp, $configAdmin.'/img/' . $img);
 
         date_default_timezone_set('Asia/Ho_Chi_Minh');
         $time = date('d-m-Y h:i:s A');
 
         $sql_set = "INSERT INTO danhsach_banner(file_upload, created_at) VALUES('$img', '$time')";
         mysqli_query($connect, $sql_set);
-        header('location: ../admin/trangquantri.php?Admin=banner_show');
+        header('location: '.$configAdmin.'/admin/trangquantri.php?Admin=banner_show');
         } else {
             $alert = '<center class="alert alert-danger mt-3">Mời nhập ảnh vào !</center>';
         }
@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
         ?>
             <div class="slideBanner col-md-6">
                 <div>
-                    <img class="imgBanner" src="../img/<?= $row['file_upload'] ?>" alt="banner">
+                    <img class="imgBanner" src="<?= $configAdmin ?>/img/<?= $row['file_upload'] ?>" alt="banner">
                 </div>
             </div>
         <?php

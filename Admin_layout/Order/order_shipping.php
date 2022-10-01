@@ -108,7 +108,7 @@ if ($hasSearch && $text) {
         <tbody>
             <tr>
                 <td>
-                    <a href="./trangquantri.php?Admin=order_detail&id_dh=<?= $row['id_dh'] ?>">Cancauaba00<?= $row['id_dh'] ?></a>
+                    <a href="<?= $configHref ?>/admin/trangquantri.php?Admin=order_detail&id_dh=<?= $row['id_dh'] ?>">Cancauaba00<?= $row['id_dh'] ?></a>
                 </td>
                 <td><?= $row['created_at'] ?></td>
                 <td><?= $row['Name'] ?></td>

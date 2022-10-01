@@ -3,15 +3,14 @@
 session_start();
 
 include_once $_SERVER['DOCUMENT_ROOT'] . '/Cancauaba/connecting/connectDB.php';
-$configAdmin = include_once '../config/config.php';
-
+$configAdmin = include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/config/config.php';
 
 if (!$_SESSION["hoTen"]) {
-    header("location: ../login/Dangnhap.php");
+    header('location: '.$configAdmin.'/login/Dangnhap.php');
 }
 
 if ($_SESSION["quyen"] == 1) {
-    header("location: ../index.php");
+    header('location: '.$configAdmin.'/index.php');
 }
 
 $content = "";
@@ -19,72 +18,72 @@ if (isset($_GET['Admin'])) {
     switch ($_GET['Admin']) {
 
         case "manage_main":
-            include_once '../Admin_layout/manage_main.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/manage_main.php';
             break;
 
         case "banner":
-            include_once '../Admin_layout/Banner/change_banner.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Banner/change_banner.php';
             break;
         
         case "under_banner":
-            include_once '../Admin_layout/Banner/UnderBanner.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Banner/UnderBanner.php';
             break;
 
         case "order":
-            include_once '../Admin_layout/Order/order_list.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Order/order_list.php';
             break;
 
         case "order_shipping":
-            include_once '../Admin_layout/Order/order_shipping.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Order/order_shipping.php';
             break;
 
         case "order_success":
-            include_once '../Admin_layout/Order/order_success.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Order/order_success.php';
             break;
         
         case "order_all":
-            include_once '../Admin_layout/Order/order_all.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Order/order_all.php';
             break;
 
         case "order_detail":
-            include_once '../Admin_layout/Order/order_detail.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Order/order_detail.php';
             break;
 
         case "product_add":
-            include_once "../Admin_layout/Product/product_add.php";
+            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Product/product_add.php';
             break;
 
         case "product_best_seller":
-            include_once "../Admin_layout/Product/product_best_seller.php";
+            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Product/product_best_seller.php';
             break;
 
         case "product_new":
-            include_once "../Admin_layout/Product/product_new.php";
+            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Product/product_new.php';
             break;
 
         case "product_show":
-            include_once "../Admin_layout/Product/product_show.php";
+            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Product/product_show.php';
             break;
 
         case "product_fix":
-            include_once "../Admin_layout/Product/product_fix.php";
+            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Product/product_fix.php';
             break;
 
         case "category_show":
-            include_once "../Admin_layout/Category/category_show.php";
+            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Category/category_show.php';
             break;
 
         case "category_add":
-            include_once "../Admin_layout/Category/category_add.php";
+            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Category/category_add.php';
             break;
 
         case "category_fix":
-            include_once "../Admin_layout/Category/category_fix.php";
+            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Category/category_fix.php';
             break;
 
     }
 } else {
-    include_once '../Admin_layout/manage_main.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/manage_main.php';
 }
 
 
@@ -103,16 +102,16 @@ if (isset($_GET['Admin'])) {
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="../library/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="<?= $configAdmin ?>/library/plugins/fontawesome-free/css/all.min.css">
     <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="../library/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="<?= $configAdmin ?>/library/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="../library/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="<?= $configAdmin ?>/library/dist/css/adminlte.min.css">
 
-    <link rel="stylesheet" href="../library/selector.css">
+    <link rel="stylesheet" href="<?= $configAdmin ?>/library/selector.css">
     
     <?php
-    include_once "../connecting/heading.php"
+    include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/heading.php'
     ?>
 </head>
 
@@ -121,17 +120,17 @@ if (isset($_GET['Admin'])) {
 
         <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__wobble" src="../img/logo.png" alt="AdminLTELogo" height="70" width="80">
+            <img class="animation__wobble" src="<?= $configAdmin ?>/img/logo.png" alt="AdminLTELogo" height="70" width="80">
         </div>
 
         <!-- Navbar -->
         <?php
-        include_once "../Admin_layout/Admin_navbar/Navbar.php";
+        include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Admin_navbar/Navbar.php';
         ?>
 
         <!-- Main Sidebar Container -->
         <?php
-        include_once "../Admin_layout/Admin_navbar/Sidebar.php";
+        include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Admin_navbar/Sidebar.php';
         ?>
 
         <!-- Content Wrapper. Contains page content -->
@@ -145,7 +144,7 @@ if (isset($_GET['Admin'])) {
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="../index.php">Cancauaba</a></li>
+                                <li class="breadcrumb-item"><a href="<?= $configAdmin ?>/index.php">Cancauaba</a></li>
                                 <li class="breadcrumb-item active">Trang quản trị</li>
                             </ol>
                         </div><!-- /.col -->
@@ -171,40 +170,40 @@ if (isset($_GET['Admin'])) {
         <!-- Main Footer -->
         <footer class="main-footer">
             <strong>Copyright &copy; 2021 </strong>
-            Bản quyền thuộc về <b><a href="../index.php">Cancauaba</a>.</b>
+            Bản quyền thuộc về <b><a href="<?= $configAdmin ?>/index.php">Cancauaba</a>.</b>
             <div class="float-right d-none d-sm-inline-block">
                 <b>Version</b> 3.1.0
             </div>
         </footer>
     </div>
-    <!-- ./wrapper -->
+    <!-- wrapper -->
 
     <!-- REQUIRED SCRIPTS -->
     <!-- jQuery -->
-    <script src="../library/plugins/jquery/jquery.min.js"></script>
+    <script src="<?= $configAdmin ?>/library/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="../library/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= $configAdmin ?>/library/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- overlayScrollbars -->
-    <script src="../library/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <script src="<?= $configAdmin ?>/library/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
     <!-- AdminLTE App -->
-    <script src="../library/dist/js/adminlte.js"></script>
+    <script src="<?= $configAdmin ?>/library/dist/js/adminlte.js"></script>
 
     <!-- PAGE PLUGINS -->
     <!-- jQuery Mapael -->
-    <script src="../library/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
-    <script src="../library/plugins/raphael/raphael.min.js"></script>
-    <script src="../library/plugins/jquery-mapael/jquery.mapael.min.js"></script>
-    <script src="../library/plugins/jquery-mapael/maps/usa_states.min.js"></script>
+    <script src="<?= $configAdmin ?>/library/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
+    <script src="<?= $configAdmin ?>/library/plugins/raphael/raphael.min.js"></script>
+    <script src="<?= $configAdmin ?>/library/plugins/jquery-mapael/jquery.mapael.min.js"></script>
+    <script src="<?= $configAdmin ?>/library/plugins/jquery-mapael/maps/usa_states.min.js"></script>
     <!-- ChartJS -->
-    <script src="../library/plugins/chart.js/Chart.min.js"></script>
+    <script src="<?= $configAdmin ?>/library/plugins/chart.js/Chart.min.js"></script>
 
     <!-- AdminLTE for demo purposes -->
-    <script src="../library/dist/js/demo.js"></script>
+    <script src="<?= $configAdmin ?>/library/dist/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="../library/dist/js/pages/dashboard2.js"></script>
+    <script src="<?= $configAdmin ?>/library/dist/js/pages/dashboard2.js"></script>
 
     <?php
-    include_once "../connecting/footing.php"
+    include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/footing.php'
     ?>
 </body>
 

@@ -10,7 +10,7 @@
             </a>
         </li> -->
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="../index.php" class="nav-link">Trang Chủ</a>
+            <a href="<?= $configAdmin ?>/index.php" class="nav-link">Trang Chủ</a>
         </li>
     </ul>
 
