@@ -1,5 +1,5 @@
 <?php
-include_once '../layout/header.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/header.php';
 ?>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -148,6 +148,6 @@ include_once '../layout/header.php';
 <script src="<?= $config ?>/assets/js/custom.js"></script>
 
 <?php
-include_once '../layout/footer.php';
-include_once '../layout/newfooter.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/footer.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/newfooter.php';
 ?>

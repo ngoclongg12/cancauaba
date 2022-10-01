@@ -3,7 +3,7 @@
 $total = 0;
 $totalAll = 0;
 
-include_once '../layout/header.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/header.php';
 ?>
 
 <link rel="stylesheet" href="<?= $config ?>/library/css-wp.less">
@@ -18,7 +18,7 @@ include_once '../layout/header.php';
     <div class="row">
         <div class="content_success">
             <div>
-                <img class="img_success" src="../img/cart_success.png" alt="cart">
+                <img class="img_success" src="<?= $config ?>/img/cart_success.png" alt="cart">
             </div>
             <div>
                 <p>Cảm ơn bạn đã đặt hàng tại <b style="color: #0077b6">Anhbafishing</b></p>
@@ -32,7 +32,8 @@ include_once '../layout/header.php';
     </div>
 </div>
 
-<?php include_once '../layout/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/footer.php'; ?>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="<?= $config ?>/assets/css/bootstrap.min.css">
@@ -75,5 +76,7 @@ include_once '../layout/header.php';
 <script src="<?= $config ?>/assets/js/jquery-modal-video.min.js"></script>
 <script src="<?= $config ?>/assets/js/thumb-slide.js"></script>
 <script src="<?= $config ?>/assets/js/custom.js"></script>
-<?php include_once '../layout/newfooter.php'; ?>
-<?php include_once '../connecting/footing.php'; ?>
+<?php
+include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/footer.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/newfooter.php';
+?>

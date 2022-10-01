@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include "../connecting/connectDB.php";
+include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/connectDB.php';
 
 if (isset($_POST["submit"])) {
 
@@ -20,10 +20,10 @@ if (isset($_POST["submit"])) {
                 $_SESSION["hoTen"] = $rowPass["fullname"];
                 $_SESSION["quyen"] = $rowPass["role"];
                 if($rowPass["role"] == 0){
-                    header('location: ../admin/trangquantri.php');
+                    header('location: '.$config.'/admin/trangquantri.php');
                 }
                 else{
-                    header('location: ../index.php');
+                    header('location: '.$config.'/index.php');
                 }
             } else {
                 $alert = '<center class="btn btn-danger">Mật khẩu không chính xác !</center>';
@@ -46,7 +46,7 @@ if (isset($_POST["submit"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng Nhập</title>
     <?php
-    include "../connecting/heading.php";
+    include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/heading.php';
     ?>
 </head>
 
@@ -55,7 +55,7 @@ if (isset($_POST["submit"])) {
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center mb-5">
-                    <h2 class="heading-section mt-5"><a id="TGBDS" href="../index.php">CẦN CÂU ANH BA</a></h2>
+                    <h2 class="heading-section mt-5"><a id="TGBDS" href="<?= $config ?>/index.php">CẦN CÂU ANH BA</a></h2>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -96,7 +96,7 @@ if (isset($_POST["submit"])) {
     </section>
 
     <?php
-    include '../connecting/footing.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/footing.php';
     ?>
 </body>
 

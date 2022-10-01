@@ -1,5 +1,5 @@
 <?php
-include_once "../connecting/connectDB.php";
+include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/connectDB.php';
 if (isset($_POST["submit"])) {
     $alert = "";
 
@@ -21,7 +21,7 @@ if (isset($_POST["submit"])) {
                 $update = "INSERT INTO danhsach_kh (username, password, role, phone, address, fullname, birthday, sex) 
                 VALUES ('$username', '$pw_hash', '1', '$sdt', '$address', '$fullname', '$birthday', '$sex')";
                 $query = mysqli_query($connect, $update);
-                header('location: ../login/Dangnhap.php');
+                header('location: '.$config.'/login/Dangnhap.php');
             }
         } else {
             $alert = '<center class="btn btn-danger col-sm-12">Vui lòng xác nhận !</center>';
@@ -41,7 +41,7 @@ if (isset($_POST["submit"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng kí</title>
     <?php
-    include_once "../connecting/heading.php";
+    include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/heading.php';
     ?>
 </head>
 
@@ -51,7 +51,7 @@ if (isset($_POST["submit"])) {
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center mb-3">
-                    <h2 class="heading-section mt-5"><a id="TGBDS" href="../index.php">CẦN CÂU ANH BA</a></h2>
+                    <h2 class="heading-section mt-5"><a id="TGBDS" href="<?= $config ?>/index.php">CẦN CÂU ANH BA</a></h2>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -149,8 +149,7 @@ if (isset($_POST["submit"])) {
     </section>
 
     <?php
-    include_once "../connecting/footing.php";
+    include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/footing.php';
     ?>
 </body>
-
 </html>

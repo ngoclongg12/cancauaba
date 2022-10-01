@@ -4,7 +4,7 @@ $total = 0;
 $totalAll = 0;
 $hoTen = null;
 include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/connectDB.php';
-include_once '../layout/header.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/header.php';
 
 if(isset($_SESSION['hoTen'])){
     $hoTen = $_SESSION['hoTen'];
@@ -83,7 +83,7 @@ if(isset($_SESSION['hoTen'])){
                 ?>
                         <tr>
                             <td scope="row">
-                                <img class="admin_img_mota" src="../img/<?= $v['Image'] ?>" alt="<?= $v['Name'] ?>">
+                                <img class="admin_img_mota" src="<?= $config ?>/img/<?= $v['Image'] ?>" alt="<?= $v['Name'] ?>">
                                 <div class="namePrd"><?= $v['Name'] ?></div>
                             </td>
                             <td><?= number_format($v['Price']) ?>đ</td>
@@ -194,6 +194,8 @@ if(isset($_SESSION['hoTen'])){
         </div>
     </div>
 </div>
-<?php include_once '../layout/footer.php'; ?>
-<?php include_once '../layout/newfooter.php'; ?>
-<?php include_once '../connecting/footing.php'; ?>
+<?php
+include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/footer.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/newfooter.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/footing.php';
+?>

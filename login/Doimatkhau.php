@@ -1,5 +1,5 @@
 <?php
-include_once "../connecting/connectBD.php";
+include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/connectBD.php';
 
 if (isset($_POST["submit"])) {
     $username = $_POST["username"];
@@ -47,7 +47,7 @@ if (isset($_POST["submit"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đổi mật khẩu</title>
     <?php
-    include_once "../connecting/heading.php";
+    include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/heading.php';
     ?>
 </head>
 
@@ -57,7 +57,7 @@ if (isset($_POST["submit"])) {
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center mb-5">
-                    <h2 class="heading-section mt-5"><a id="TGBDS" href="../index.php">CẦN CÂU ANH B</a></h2>
+                    <h2 class="heading-section mt-5"><a id="TGBDS" href="<?= $config ?>/index.php">CẦN CÂU ANH B</a></h2>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -104,7 +104,7 @@ if (isset($_POST["submit"])) {
     </section>
 
     <?php
-    include_once "../connecting/footing.php";
+    include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/footing.php';
     ?>
 </body>
 

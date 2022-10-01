@@ -1,7 +1,5 @@
 <?php 
-
-include_once '../layout/header.php'; 
-
+include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/header.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/connectDB.php';
 
 if(isset($_GET['id_sp'])){
@@ -315,5 +313,8 @@ if(isset($_GET['id_sp'])){
 <script src="<?= $config ?>/assets/js/thumb-slide.js"></script>
 
 <script src="<?= $config ?>/assets/js/custom.js"></script>
-<?php include_once '../layout/footer.php'; ?>
-<?php include_once '../layout/newfooter.php'; ?>
+
+<?php
+include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/footer.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/newfooter.php';
+?>

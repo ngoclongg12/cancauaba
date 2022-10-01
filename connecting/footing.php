@@ -201,7 +201,7 @@
                 data: {
                     val_id_dh: id_dh
                 },
-                url: '../Admin_layout/Order/order_processList.php',
+                url: <?= $config ?>'/Admin_layout/Order/order_processList.php',
                 method: 'get',
             }).done(res => {
                 window.location.replace("<?= $config ?>/admin/trangquantri.php?Admin=order_shipping");
@@ -217,7 +217,7 @@
                 data: {
                     done_id_dh: done_id
                 },
-                url: '../Admin_layout/Order/order_processShip.php',
+                url: <?= $config ?>'/Admin_layout/Order/order_processShip.php',
                 method: 'get',
             }).done(res => {
                 window.location.replace("<?= $config ?>/admin/trangquantri.php?Admin=order_success");

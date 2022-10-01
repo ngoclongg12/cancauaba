@@ -1,9 +1,8 @@
 <?php
 session_start();
-$config = include_once "../config/config.php";
-echo $config;
+$config = include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/config/config.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/connectDB.php';
 
-include_once "../connecting/connectDB.php";
 
 if (isset($_GET['t']) && $_GET['t'] == "del") {
 

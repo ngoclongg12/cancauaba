@@ -1,5 +1,5 @@
 <?php
-include_once '../layout/header.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/header.php';
 ?>
 
 <head>
@@ -199,5 +199,7 @@ include_once '../layout/header.php';
     <script src="<?= $config ?>/assets/js/thumb-slide.js"></script>
     <script src="<?= $config ?>/assets/js/custom.js"></script>
 </body>
-<?php include_once '../layout/footer.php'; ?>
-<?php include_once '../layout/newfooter.php'; ?>
+<?php
+include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/footer.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/newfooter.php';
+?>

@@ -1,5 +1,5 @@
 <?php
-include_once '../layout/header.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/header.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/connectDB.php';
 
 $type = 'moicau';
@@ -207,6 +207,6 @@ $query = mysqli_query($connect, $sql);
 <script src="<?= $config ?>/assets/js/custom.js"></script>
 
 <?php
-include_once '../layout/footer.php';
-include_once '../layout/newfooter.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/footer.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/newfooter.php';
 ?>
