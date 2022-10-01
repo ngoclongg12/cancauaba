@@ -1,8 +1,8 @@
 <?php
-$config = include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/config/config.php';
+$config = include $_SERVER['DOCUMENT_ROOT'] . '/config/config.php';
 header('location: '.$config.'/admin/trangquantri.php?Admin=category_show');
 die('fsdfsd');
-include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/connectDB.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/connecting/connectDB.php';
 
 $id_dm = $_GET["id"];
 

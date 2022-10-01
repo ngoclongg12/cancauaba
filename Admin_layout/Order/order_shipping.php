@@ -1,6 +1,6 @@
 <?php
 ob_start();
-$configHref = include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/config/config.php';
+$configHref = include $_SERVER['DOCUMENT_ROOT'] . '/config/config.php';
 $text = '';
 $hasSearch = false;
 $stt_dh = "Shipping";

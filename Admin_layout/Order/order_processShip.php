@@ -1,5 +1,5 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/connectDB.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/connecting/connectDB.php';
 
 if(isset($_GET['done_id_dh'])){
     date_default_timezone_set('Asia/Ho_Chi_Minh');

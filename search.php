@@ -1,5 +1,5 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/connectDB.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/connecting/connectDB.php';
 include_once './layout/header.php';
 
 if (isset($_GET["s"])) {

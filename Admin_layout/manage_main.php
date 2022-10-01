@@ -1,6 +1,6 @@
 <?php
     ob_start();
-    include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/connectDB.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/connecting/connectDB.php';
 
     $sql_handling = "SELECT * FROM danhsach_donhang WHERE Status = 'handling'";
     $query_sql_handling = mysqli_query($connect, $sql_handling);

@@ -1,5 +1,5 @@
 <?php
-$config = include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/config/config.php';
+$config = include_once $_SERVER['DOCUMENT_ROOT'] . '/config/config.php';
 ?>
 
 <!DOCTYPE html>

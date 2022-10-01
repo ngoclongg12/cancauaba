@@ -3,8 +3,8 @@
 $total = 0;
 $totalAll = 0;
 $hoTen = null;
-include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/connectDB.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/header.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/connecting/connectDB.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/layout/header.php';
 
 if(isset($_SESSION['hoTen'])){
     $hoTen = $_SESSION['hoTen'];
@@ -195,7 +195,7 @@ if(isset($_SESSION['hoTen'])){
     </div>
 </div>
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/footer.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/newfooter.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/footing.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/layout/footer.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/layout/newfooter.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/connecting/footing.php';
 ?>

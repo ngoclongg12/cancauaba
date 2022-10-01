@@ -1,7 +1,7 @@
 <?php
 
 include $_SERVER["DOCUMENT_ROOT"] . "/cancauaba/connecting/connectDB.php";
-$configHref = include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/config/config.php';
+$configHref = include $_SERVER['DOCUMENT_ROOT'] . '/config/config.php';
 
 $id_sp = $_GET["id_sp"];
 

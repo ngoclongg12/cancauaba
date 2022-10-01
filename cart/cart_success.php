@@ -3,7 +3,7 @@
 $total = 0;
 $totalAll = 0;
 
-include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/header.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/layout/header.php';
 ?>
 
 <link rel="stylesheet" href="<?= $config ?>/library/css-wp.less">
@@ -32,7 +32,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/header.php';
     </div>
 </div>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/layout/footer.php'; ?>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -77,6 +77,6 @@ include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/header.php';
 <script src="<?= $config ?>/assets/js/thumb-slide.js"></script>
 <script src="<?= $config ?>/assets/js/custom.js"></script>
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/footer.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/newfooter.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/layout/footer.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/layout/newfooter.php';
 ?>

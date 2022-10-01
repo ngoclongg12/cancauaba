@@ -2,8 +2,8 @@
 
 session_start();
 
-include_once $_SERVER['DOCUMENT_ROOT'] . '/Cancauaba/connecting/connectDB.php';
-$configAdmin = include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/config/config.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/connecting/connectDB.php';
+$configAdmin = include $_SERVER['DOCUMENT_ROOT'] . '/config/config.php';
 
 if (!$_SESSION["hoTen"]) {
     header('location: '.$configAdmin.'/login/Dangnhap.php');
@@ -18,72 +18,72 @@ if (isset($_GET['Admin'])) {
     switch ($_GET['Admin']) {
 
         case "manage_main":
-            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/manage_main.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/Admin_layout/manage_main.php';
             break;
 
         case "banner":
-            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Banner/change_banner.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/Admin_layout/Banner/change_banner.php';
             break;
         
         case "under_banner":
-            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Banner/UnderBanner.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/Admin_layout/Banner/UnderBanner.php';
             break;
 
         case "order":
-            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Order/order_list.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/Admin_layout/Order/order_list.php';
             break;
 
         case "order_shipping":
-            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Order/order_shipping.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/Admin_layout/Order/order_shipping.php';
             break;
 
         case "order_success":
-            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Order/order_success.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/Admin_layout/Order/order_success.php';
             break;
         
         case "order_all":
-            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Order/order_all.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/Admin_layout/Order/order_all.php';
             break;
 
         case "order_detail":
-            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Order/order_detail.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/Admin_layout/Order/order_detail.php';
             break;
 
         case "product_add":
-            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Product/product_add.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/Admin_layout/Product/product_add.php';
             break;
 
         case "product_best_seller":
-            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Product/product_best_seller.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/Admin_layout/Product/product_best_seller.php';
             break;
 
         case "product_new":
-            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Product/product_new.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/Admin_layout/Product/product_new.php';
             break;
 
         case "product_show":
-            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Product/product_show.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/Admin_layout/Product/product_show.php';
             break;
 
         case "product_fix":
-            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Product/product_fix.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/Admin_layout/Product/product_fix.php';
             break;
 
         case "category_show":
-            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Category/category_show.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/Admin_layout/Category/category_show.php';
             break;
 
         case "category_add":
-            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Category/category_add.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/Admin_layout/Category/category_add.php';
             break;
 
         case "category_fix":
-            include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Category/category_fix.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/Admin_layout/Category/category_fix.php';
             break;
 
     }
 } else {
-    include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/manage_main.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/Admin_layout/manage_main.php';
 }
 
 
@@ -111,7 +111,7 @@ if (isset($_GET['Admin'])) {
     <link rel="stylesheet" href="<?= $configAdmin ?>/library/selector.css">
     
     <?php
-    include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/heading.php'
+    include $_SERVER['DOCUMENT_ROOT'] . '/connecting/heading.php'
     ?>
 </head>
 
@@ -125,12 +125,12 @@ if (isset($_GET['Admin'])) {
 
         <!-- Navbar -->
         <?php
-        include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Admin_navbar/Navbar.php';
+        include $_SERVER['DOCUMENT_ROOT'] . '/Admin_layout/Admin_navbar/Navbar.php';
         ?>
 
         <!-- Main Sidebar Container -->
         <?php
-        include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/Admin_layout/Admin_navbar/Sidebar.php';
+        include $_SERVER['DOCUMENT_ROOT'] . '/Admin_layout/Admin_navbar/Sidebar.php';
         ?>
 
         <!-- Content Wrapper. Contains page content -->
@@ -203,7 +203,7 @@ if (isset($_GET['Admin'])) {
     <script src="<?= $configAdmin ?>/library/dist/js/pages/dashboard2.js"></script>
 
     <?php
-    include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/footing.php'
+    include $_SERVER['DOCUMENT_ROOT'] . '/connecting/footing.php'
     ?>
 </body>
 

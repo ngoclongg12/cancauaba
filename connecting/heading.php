@@ -1,5 +1,5 @@
 <?php
-$config = include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/config/config.php';
+$config = include $_SERVER['DOCUMENT_ROOT'] . '/config/config.php';
 ?>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">

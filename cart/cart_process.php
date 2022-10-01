@@ -1,7 +1,7 @@
 <?php
 session_start();
-$config = include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/config/config.php';
-include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/connectDB.php';
+$config = include $_SERVER['DOCUMENT_ROOT'] . '/config/config.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/connecting/connectDB.php';
 
 
 if (isset($_GET['t']) && $_GET['t'] == "del") {

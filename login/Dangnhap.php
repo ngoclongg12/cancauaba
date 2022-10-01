@@ -1,8 +1,8 @@
 <?php
 
 session_start();
-include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/connectDB.php';
-$config = include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/config/config.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/connecting/connectDB.php';
+$config = include $_SERVER['DOCUMENT_ROOT'] . '/config/config.php';
 
 if (isset($_POST["submit"])) {
 
@@ -47,7 +47,7 @@ if (isset($_POST["submit"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng Nhập</title>
     <?php
-    include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/heading.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/connecting/heading.php';
     ?>
 </head>
 
@@ -97,7 +97,7 @@ if (isset($_POST["submit"])) {
     </section>
 
     <?php
-    include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/footing.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/connecting/footing.php';
     ?>
 </body>
 

@@ -1,6 +1,6 @@
 <?php 
-include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/header.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/connectDB.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/layout/header.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/connecting/connectDB.php';
 
 if(isset($_GET['id_sp'])){
     $id = $_GET['id_sp'];
@@ -315,6 +315,6 @@ if(isset($_GET['id_sp'])){
 <script src="<?= $config ?>/assets/js/custom.js"></script>
 
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/footer.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/layout/newfooter.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/layout/footer.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/layout/newfooter.php';
 ?>

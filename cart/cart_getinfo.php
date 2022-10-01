@@ -1,9 +1,9 @@
 <?php
 session_start();
-include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/connecting/connectDB.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/connecting/connectDB.php';
 
 if (!isset($_SESSION['giohang'])) {
-    $configCheckSession = include_once $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/config/config.php';
+    $configCheckSession = include_once $_SERVER['DOCUMENT_ROOT'] . '/config/config.php';
     header('location: '.$configCheckSession.'/cart/cart.php');
 }
 

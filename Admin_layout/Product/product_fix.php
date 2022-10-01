@@ -1,6 +1,6 @@
 <?php
 ob_start();
-$configHref = include $_SERVER['DOCUMENT_ROOT'] . '/cancauaba/config/config.php';
+$configHref = include $_SERVER['DOCUMENT_ROOT'] . '/config/config.php';
 
 $id_sp = $_GET['id_sp'];
 $getInf = "SELECT * FROM danhsach_sp WHERE ID='$id_sp'";
