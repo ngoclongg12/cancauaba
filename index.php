@@ -49,7 +49,7 @@ $query_product_best_seller = mysqli_query($connect, $product_best_seller);
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?= $config ?>/xmlrpc.php">
 	
-	<link rel="stylesheet" href="<?= $config ?>/library/css-wp.less">
+	<link rel="stylesheet" href="<?= $config ?>/library/$_SERVER['DOCUMENT_ROOT'] . '/">
 	
 	<script>
 		(function(html) {

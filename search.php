@@ -64,7 +64,7 @@ $query = mysqli_query($connect, $sql);
 
 <link rel="stylesheet" href="<?= $config ?>/assets/css/responsive.css">
 <link rel="icon" type="image/png" href="<?= $config ?>/assets/images/favicon.png">
-<link rel="stylesheet" href="<?= $config ?>/library/css-wp.less">
+<link rel="stylesheet" href="<?= $config ?>/library/$_SERVER['DOCUMENT_ROOT'] . '/">
 <link rel="stylesheet" href="<?= $config ?>/library/bootstrap-v4/css/bootstrap.min.css">
 <style>
     a:hover {

@@ -6,7 +6,7 @@ $totalAll = 0;
 include $_SERVER['DOCUMENT_ROOT'] . '/layout/header.php';
 ?>
 
-<link rel="stylesheet" href="<?= $config ?>/library/css-wp.less">
+<link rel="stylesheet" href="<?= $config ?>/library/$_SERVER['DOCUMENT_ROOT'] . '/">
 <link rel="stylesheet" href="<?= $config ?>/library/bootstrap-v4/css/bootstrap.min.css">
 
 <div class="container mt-5 cart_success">

@@ -5,7 +5,7 @@ $totalAll = 0;
 
 include_once '../layout/header.php';
 ?>
-<link rel="stylesheet" href="<?= $config ?>/library/css-wp.less">
+<link rel="stylesheet" href="<?= $config ?>/library/$_SERVER['DOCUMENT_ROOT'] . '/">
 
 <link rel="stylesheet" href="<?= $config ?>/library/bootstrap-v4/css/bootstrap.min.css">
 
